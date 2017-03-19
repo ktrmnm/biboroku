@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Kentaro Minami'
 SITENAME = 'StatsBiboroku'
-SITEURL = ''
+SITEURL = 'http://ktrmnm.github.io/biboroku'
 
 PATH = 'content'
 
@@ -24,11 +24,11 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Githubリポジトリ', 'https://github.com/ktrmnm/biboroku'),
-    ('Kentaro Minami (HP)', 'https://sites.google.com/site/ktrmnm1991/home'),)
+LINKS = (('Githubリポジトリ', 'http://github.com/ktrmnm/biboroku'),
+    ('Kentaro Minami (HP)', 'http://sites.google.com/site/ktrmnm1991/home'),)
 
 # Social widget
-SOCIAL = (('Github', 'https://github.com/ktrmnm'),)
+SOCIAL = (('Github', 'http://github.com/ktrmnm'),)
 
 DEFAULT_PAGINATION = 10
 
