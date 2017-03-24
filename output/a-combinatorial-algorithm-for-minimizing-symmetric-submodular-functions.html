@@ -1,0 +1,212 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>StatsBiboroku</title>
+		<meta name="description" content="">
+		<meta name="author" content="Kentaro Minami">
+
+		<link rel="stylesheet" href="./theme/css/foundation.css" />
+		<link rel="stylesheet" href="./theme/css/pygment/monokai.css" />
+		<link rel="stylesheet" href="./theme/css/custom.css" />
+
+		<!-- GOOGLE WEB FONTS -->
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="./theme/css/alt-fonts.css" />
+
+		<script src="./theme/js/modernizr.js"></script>
+
+		<!-- Feeds -->
+
+
+		<!-- mathjax config similar to math.stackexchange -->
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			jax: ["input/TeX", "output/HTML-CSS"],
+			tex2jax: {
+				inlineMath: [ ['$', '$'] ],
+				displayMath: [ ['$$', '$$']],
+				processEscapes: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+			},
+			messageStyle: "none",
+			"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+		});
+		</script>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	</head>
+	<body>
+		<div class="off-canvas-wrap">
+			<div class="inner-wrap">
+				<!-- mobile top bar to activate nav -->
+				<nav class="tab-bar show-for-small">
+					<section class="left-small">
+						<a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+					</section>
+
+					<section class="middle tab-bar-section">
+						<h1 class="title">StatsBiboroku</h1>
+					</section>
+				</nav>
+
+				<!-- mobile side bar nav -->
+				<aside class="left-off-canvas-menu">
+					<ul class="off-canvas-list">
+						<li><a href=".">Home</a></li>
+						<li><label>Categories</label></li>
+							<li class="active"><a href="./category/optimization.html">Optimization</a></li>
+							<li ><a href="./category/statistics.html">Statistics</a></li>
+
+						<li><label>Links</label></li>
+							<li><a href="http://github.com/ktrmnm/biboroku">Githubリポジトリ</a></li>
+							<li><a href="http://sites.google.com/site/ktrmnm1991/home">Kentaro Minami (HP)</a></li>
+
+						<li><label>Tags</label></li>
+							<li><a href="./tag/as.html">[AS]</a></li>
+							<li><a href="./tag/gao-ci-yuan.html">高次元</a></li>
+							<li><a href="./tag/jasa.html">[JASA]</a></li>
+							<li><a href="./tag/jmlr.html">[JMLR]</a></li>
+							<li><a href="./tag/lasso.html">lasso</a></li>
+							<li><a href="./tag/li-san-zui-shi-hua.html">離散最適化</a></li>
+							<li><a href="./tag/lie-moziyurazui-xiao-hua.html">劣モジュラ最小化</a></li>
+							<li><a href="./tag/moderuxuan-ze.html">モデル選択</a></li>
+							<li><a href="./tag/soda.html">[SODA]</a></li>
+							<li><a href="./tag/statistical-science.html">[Statistical Science]</a></li>
+							<li><a href="./tag/supasutui-ding.html">スパース推定</a></li>
+							<li><a href="./tag/sure.html">SURE</a></li>
+							<li><a href="./tag/wavelet.html">wavelet</a></li>
+
+						<li><label>Monthly Archives</label></li>
+									<li><a href="/posts/2017/03/index.html">3月 2017 (6)</a></li>
+
+						<li><label>Social</label></li>
+							<li><a href="http://github.com/ktrmnm">Github</a></li>
+					</ul>
+				</aside>
+
+				<!-- top bar nav -->
+				<nav class="top-bar hide-for-small-only" data-topbar>
+					<ul class="title-area">
+						<li class="name">
+							<h1><a href="./">StatsBiboroku</a></h1>
+						</li>
+					</ul>
+
+					<section class="top-bar-section">
+						<ul class="left">
+								<li class="active"><a href="./category/optimization.html">Optimization</a></li>
+								<li ><a href="./category/statistics.html">Statistics</a></li>
+						</ul>
+                        <ul class="right">
+····
+                                     <li><a href="./pages/format-guide.html">フォーマットガイド</a></li>
+                        </ul>
+					</section>
+				</nav>
+
+				<!-- Main Page Content and Sidebar -->
+				<section class="main-section">
+					<div class="row">
+						<!-- Main Content -->
+						<div class="medium-9 small-12 columns" role="content">
+<article>
+	<h2>A combinatorial algorithm for minimizing symmetric submodular functions</h2>
+	<h2>概要</h2>
+<p>対称劣モジュラ関数最小化の $O(|V|^3)$ アルゴリズムを与えた論文．ただし，対称劣モジュラ関数というのは，劣モジュラ関数 $f: 2^V \to \mathbb{R}$ であって，$f(X) = f(V - X)$ が成り立つものである．</p>
+<h2>文献情報</h2>
+<ul>
+<li>Author: M. Queyranne</li>
+<li>Conference: SODA</li>
+<li>Year: 1995</li>
+<li><a href="http://dl.acm.org/citation.cfm?id=313669">URL</a></li>
+</ul>
+<h2>コメント</h2>
+<ol>
+<li>
+<p>対称劣モジュラ関数のわかりやすい例は，無向グラフのカット関数である．また，fが劣モジュラ関数のとき，$g(X) = f(X) + f(V - X)$ によって対称劣モジュラ関数 $g$ を作れる．</p>
+</li>
+<li>
+<p>「対称劣モジュラ関数最小化」とは，正確には，$|V| \geq 2$ として，空集合と全体集合を除いた $V$ の真部分集合の中で $f$ を最小化するものを求める問題である．例えば，非負重みをもつ無向グラフのカット関数の最小値は明らかに $f(\emptyset) = f(V) = 0$ であるが，そうではなくて非自明な部分の最小値を求める．</p>
+</li>
+<li>
+<p>アルゴリズムの概要は次の通りである： まず，任意の対称劣モジュラ関数に対して，pendent pairと呼ばれる頂点のペア $(s,t)$ が存在することが知られている．ここでpendent pairというのは，$s$ を固定したとき，s-tカットの最小値が1点集合 ${ t }$ によって達成されるもののことである．このようなペアは $O(n^2)$ 回の関数呼び出しで発見することができる．Queyranneのアルゴリズムは，pendent pair発見アルゴリズムを再帰的に $n-1$ 回呼び出すことで得られる．定義から，pendent pair $(s, t)$ があるとき，最小化問題の解 $X$ は $f(X) = f(t)$ であるか，$s, t \in X$ であるかのどちらかである．前者であれば終了だが，それは判定できないので，ひとまず $t$ と $f(t)$ の値を記憶しておく．後者であると仮定すると，$(s, t)$ をまとめて1頂点だと思うことで，サイズが $n-1$ の問題に帰着される．よって，「pendent pairを見つけて結合する」という操作を残り2頂点になるまで繰り返せば，記憶した $t$ のうちどれかがminimizerになっている．</p>
+</li>
+<li>
+<p>もともと，Nagamochi and Ibaraki (1992)の最小s-tカットアルゴリズムというものがあり，その拡張として提案されたらしい．<a href="https://www.elsevier.com/books/submodular-functions-and-optimization/fujishige/978-0-444-52086-9">Fujishige (2005)</a> のsection 13にも歴史が載っている．</p>
+</li>
+</ol>
+	<hr/>
+	<h6>Written by <a href="./author/kentaro-minami.html">Kentaro Minami</a> in <a href="./category/optimization.html">Optimization</a> on 土, 25  3 2017. Tags: <a href="./tag/soda.html">[SODA]</a>, <a href="./tag/li-san-zui-shi-hua.html">離散最適化</a>, <a href="./tag/lie-moziyurazui-xiao-hua.html">劣モジュラ最小化</a>, </h6>
+</article>
+
+<hr/>
+						</div>
+						<!-- End Main Content -->
+						<!-- Sidebar -->
+						<aside class="medium-3 hide-for-small-only columns">
+							<div class="panel">
+								<h5>Links</h5>
+								<ul class="side-nav">
+									<li><a href="http://github.com/ktrmnm/biboroku">Githubリポジトリ</a></li>
+									<li><a href="http://sites.google.com/site/ktrmnm1991/home">Kentaro Minami (HP)</a></li>
+								</ul>
+							</div>
+
+							<div class="panel">
+								<h5>Tags</h5>
+								<ul class="tag-cloud">
+									<li><a href="/tag/[soda].html" class="tag-[<pelican.contents.Article object at 0x10405def0>]">[SODA]</a></li>
+									<li><a href="/tag/離散最適化.html" class="tag-[<pelican.contents.Article object at 0x10405def0>]">離散最適化</a></li>
+									<li><a href="/tag/劣モジュラ最小化.html" class="tag-[<pelican.contents.Article object at 0x10405def0>]">劣モジュラ最小化</a></li>
+									<li><a href="/tag/[jmlr].html" class="tag-[<pelican.contents.Article object at 0x104044908>]">[JMLR]</a></li>
+									<li><a href="/tag/lasso.html" class="tag-[<pelican.contents.Article object at 0x104044908>, <pelican.contents.Article object at 0x104059d30>, <pelican.contents.Article object at 0x104044b00>, <pelican.contents.Article object at 0x104044630>]">lasso</a></li>
+									<li><a href="/tag/高次元.html" class="tag-[<pelican.contents.Article object at 0x104044908>, <pelican.contents.Article object at 0x104059d30>, <pelican.contents.Article object at 0x104044b00>, <pelican.contents.Article object at 0x104044630>]">高次元</a></li>
+									<li><a href="/tag/スパース推定.html" class="tag-[<pelican.contents.Article object at 0x104044908>, <pelican.contents.Article object at 0x104059d30>, <pelican.contents.Article object at 0x104044b00>, <pelican.contents.Article object at 0x104044630>]">スパース推定</a></li>
+									<li><a href="/tag/[statistical-science].html" class="tag-[<pelican.contents.Article object at 0x104059d30>]">[Statistical Science]</a></li>
+									<li><a href="/tag/[as].html" class="tag-[<pelican.contents.Article object at 0x104044630>]">[AS]</a></li>
+									<li><a href="/tag/モデル選択.html" class="tag-[<pelican.contents.Article object at 0x104044630>]">モデル選択</a></li>
+									<li><a href="/tag/[jasa].html" class="tag-[<pelican.contents.Article object at 0x104054908>]">[JASA]</a></li>
+									<li><a href="/tag/wavelet.html" class="tag-[<pelican.contents.Article object at 0x104054908>]">wavelet</a></li>
+									<li><a href="/tag/sure.html" class="tag-[<pelican.contents.Article object at 0x104054908>]">SURE</a></li>
+								</ul>
+							</div>
+
+							<div class="panel">
+								<h5>Monthly Archives</h5>
+								<ul class="side-nav">
+											<li><a href="/posts/2017/03/index.html">3月 2017 (6)</a></li>
+								</ul>
+							</div>
+
+							<div class="panel">
+								<h5>Social</h5>
+								<ul class="side-nav">
+									<li><a href="http://github.com/ktrmnm">Github</a></li>
+								</ul>
+							</div>
+						</aside>
+						<!-- End Sidebar -->
+					</div>
+
+					<!-- Footer -->
+					<footer class="row">
+						<div class="medium-9 small-12">
+							<hr/>
+							<p class="text-center">Powered by <a href="http://getpelican.com">Pelican</a></p>
+						</div>
+					</footer>
+					<!-- End Footer -->
+				</section>
+				<a class="exit-off-canvas"></a>
+			</div><!--off-canvas inner-->
+		</div><!--off-canvas wrap-->
+
+		<script src="./theme/js/jquery.js"></script>
+		<script src="./theme/js/foundation.min.js"></script>
+		<script>
+			$(document).foundation();
+		</script>
+	</body>
+</html>

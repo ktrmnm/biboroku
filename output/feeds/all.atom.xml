@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>StatsBiboroku</title><link href="https://ktrmnm.github.io/biboroku/" rel="alternate"></link><link href="https://ktrmnm.github.io/biboroku/feeds/all.atom.xml" rel="self"></link><id>https://ktrmnm.github.io/biboroku/</id><updated>2017-03-19T22:20:00+09:00</updated><entry><title>Adapting to Unknown Smoothness via Wavelet Shrinkage</title><link href="https://ktrmnm.github.io/biboroku/adapting-to-unknown-smoothness-via-wavelet-shrinkage.html" rel="alternate"></link><published>2017-03-19T22:20:00+09:00</published><updated>2017-03-19T22:20:00+09:00</updated><author><name>Kentaro Minami</name></author><id>tag:ktrmnm.github.io,2017-03-19:/biboroku/adapting-to-unknown-smoothness-via-wavelet-shrinkage.html</id><summary type="html">&lt;h2&gt;概要&lt;/h2&gt;
+&lt;h2&gt;文献情報&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Journal of The American Statistical Association (1995)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.jstor.org/stable/2291512"&gt;URL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><content type="html">&lt;h2&gt;概要&lt;/h2&gt;
+&lt;h2&gt;文献情報&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Journal of The American Statistical Association (1995)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.jstor.org/stable/2291512"&gt;URL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="[JASA]"></category><category term="wavelet"></category><category term="SURE"></category></entry></feed>

@@ -1,0 +1,312 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>StatsBiboroku</title>
+		<meta name="description" content="">
+		<meta name="author" content="Kentaro Minami">
+
+		<link rel="stylesheet" href="../theme/css/foundation.css" />
+		<link rel="stylesheet" href="../theme/css/pygment/monokai.css" />
+		<link rel="stylesheet" href="../theme/css/custom.css" />
+
+		<!-- GOOGLE WEB FONTS -->
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../theme/css/alt-fonts.css" />
+
+		<script src="../theme/js/modernizr.js"></script>
+
+		<!-- Feeds -->
+
+
+		<!-- mathjax config similar to math.stackexchange -->
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			jax: ["input/TeX", "output/HTML-CSS"],
+			tex2jax: {
+				inlineMath: [ ['$', '$'] ],
+				displayMath: [ ['$$', '$$']],
+				processEscapes: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+			},
+			messageStyle: "none",
+			"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+		});
+		</script>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	</head>
+	<body>
+		<div class="off-canvas-wrap">
+			<div class="inner-wrap">
+				<!-- mobile top bar to activate nav -->
+				<nav class="tab-bar show-for-small">
+					<section class="left-small">
+						<a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+					</section>
+
+					<section class="middle tab-bar-section">
+						<h1 class="title">StatsBiboroku</h1>
+					</section>
+				</nav>
+
+				<!-- mobile side bar nav -->
+				<aside class="left-off-canvas-menu">
+					<ul class="off-canvas-list">
+						<li><a href="..">Home</a></li>
+						<li><label>Categories</label></li>
+							<li ><a href="../category/optimization.html">Optimization</a></li>
+							<li class="active"><a href="../category/statistics.html">Statistics</a></li>
+
+						<li><label>Links</label></li>
+							<li><a href="http://github.com/ktrmnm/biboroku">Githubリポジトリ</a></li>
+							<li><a href="http://sites.google.com/site/ktrmnm1991/home">Kentaro Minami (HP)</a></li>
+
+						<li><label>Tags</label></li>
+							<li><a href="../tag/as.html">[AS]</a></li>
+							<li><a href="../tag/gao-ci-yuan.html">高次元</a></li>
+							<li><a href="../tag/jasa.html">[JASA]</a></li>
+							<li><a href="../tag/jmlr.html">[JMLR]</a></li>
+							<li><a href="../tag/lasso.html">lasso</a></li>
+							<li><a href="../tag/li-san-zui-shi-hua.html">離散最適化</a></li>
+							<li><a href="../tag/lie-moziyurazui-xiao-hua.html">劣モジュラ最小化</a></li>
+							<li><a href="../tag/moderuxuan-ze.html">モデル選択</a></li>
+							<li><a href="../tag/soda.html">[SODA]</a></li>
+							<li><a href="../tag/statistical-science.html">[Statistical Science]</a></li>
+							<li><a href="../tag/supasutui-ding.html">スパース推定</a></li>
+							<li><a href="../tag/sure.html">SURE</a></li>
+							<li><a href="../tag/wavelet.html">wavelet</a></li>
+
+						<li><label>Monthly Archives</label></li>
+									<li><a href="/posts/2017/03/index.html">3月 2017 (5)</a></li>
+
+						<li><label>Social</label></li>
+							<li><a href="http://github.com/ktrmnm">Github</a></li>
+					</ul>
+				</aside>
+
+				<!-- top bar nav -->
+				<nav class="top-bar hide-for-small-only" data-topbar>
+					<ul class="title-area">
+						<li class="name">
+							<h1><a href="../">StatsBiboroku</a></h1>
+						</li>
+					</ul>
+
+					<section class="top-bar-section">
+						<ul class="left">
+								<li ><a href="../category/optimization.html">Optimization</a></li>
+								<li class="active"><a href="../category/statistics.html">Statistics</a></li>
+						</ul>
+                        <ul class="right">
+····
+                                     <li><a href="../pages/format-guide.html">フォーマットガイド</a></li>
+                        </ul>
+					</section>
+				</nav>
+
+				<!-- Main Page Content and Sidebar -->
+				<section class="main-section">
+					<div class="row">
+						<!-- Main Content -->
+						<div class="medium-9 small-12 columns" role="content">
+							<div class="row">
+								<div class="small-12 columns">
+									<h2>Category: Statistics</h2>
+								</div>
+							</div>
+
+<article>
+	<h3><a href="../a-practical-scheme-and-fast-algorithm-to-tune-the-lasso-with-optimality-guarantees.html">A Practical Scheme and Fast Algorithm to Tune the Lasso With Optimality Guarantees</a></h3>
+	<h6>Written by <a href="../author/kentaro-minami.html">Kentaro Minami</a> in <a href="../category/statistics.html">Statistics</a> on 金, 24  3 2017. Tags: <a href="../tag/jmlr.html">[JMLR]</a>, <a href="../tag/lasso.html">lasso</a>, <a href="../tag/gao-ci-yuan.html">高次元</a>, <a href="../tag/supasutui-ding.html">スパース推定</a>, </h6>
+	<h2>概要</h2>
+<p>Lassoのハイパーパラメータをチューニングする手法である $AV_\infty$ を提案．真の回帰係数に対してsupノルムの意味での理論保証があり，計算機実験ではcross-validationより高速かつ高性能である．</p>
+<h2>文献情報</h2>
+<ul>
+<li>Author: M. Chichignoud, J. Lederer and M. Wainwright</li>
+<li>Journal: Journal of Machine Learning Research</li>
+<li>Year: 2016</li>
+<li><a href="http://www.jmlr.org/papers/volume17/15-605/15-605.pdf">URL</a></li>
+</ul>
+</article>
+<hr />
+<article>
+	<h3><a href="../a-unified-framework-for-high-dimensional-analysis-of-m-estimators-with-decomposable-regularizers.html">A unified framework for high-dimensional analysis of M-estimators with decomposable regularizers</a></h3>
+	<h6>Written by <a href="../author/kentaro-minami.html">Kentaro Minami</a> in <a href="../category/statistics.html">Statistics</a> on 金, 24  3 2017. Tags: <a href="../tag/statistical-science.html">[Statistical Science]</a>, <a href="../tag/lasso.html">lasso</a>, <a href="../tag/gao-ci-yuan.html">高次元</a>, <a href="../tag/supasutui-ding.html">スパース推定</a>, </h6>
+	<h2>概要</h2>
+<p>高次元統計では，観測の次元 $n$ に対してパラメータの次元 $p$ が大きいモデルを扱う．このような状況では，真の分布（真のパラメータ）の構造に関する仮定が何もなければ，適当な意味で一致性や収束性をもった推定を行うことができない．よって，高次元統計では真のパラメータに何らかの「低次元構造」を仮定する．代表的な低次元構造はスパース性，グループスパース性，行列の低ランク性などである．</p>
+<p>現在までの高次元統計で最も発展してきた推定手法といえば，$\ell_1$-正則化（i.e. Lasso [Tibshirani 1996]）をはじめとした，スパース性罰則つきのM-推定である．例えば，スパースベクトルの推定にはLasso [Tibshirani 1996]，グループ構造をもったスパースベクトルの推定にはGroup lasso [Yuan and Lin 2006]，低ランク行列の推定には核ノルム正則化などといった正則化手法が用いられる．高次元統計の理論では，こういったM-推定量に対して，予測誤差やリスクの収束レートやそのための条件が研究されてきた．Lassoを例にとるならば，真のベクトルが $s$-スパース（非ゼロ要素数が $s$）であって，計画行列に適当な条件があるならば，パラメータ推定のレートはおよそ $s \log p / n$ になるといった様子である．</p>
+<p>この論文では，高次元M-推定の設定を抽象化し，収束レートとそのための条件を非常に一般的な形で与えた．とくに，(1) 正則化項が分解可能ノルム (decomposable norm) であって，(2) 損失関数が制限強凸性 (restricted strong convexity) という性質をもつときに，subspace compatibility constantと呼ばれる量で推定誤差や損失のバウンドを与えることができる．これによって，高次元のさまざまな設定での収束レートを導出することができる．Lassoについては，スパースベクトルの復元についての既知の収束レートを復元したり，弱スパース性（ $\ell_q$-セミノルム（$q \in [0, 1]$) の制約）のもとでの収束レートを導出することができる．</p>
+<h2>文献情報</h2>
+<ul>
+<li>Author: S. Negahban, P. Ravikumar, M. Wainwright and B. Yu</li>
+<li>Journal: Statistical Science</li>
+<li>Year: 2012</li>
+<li><a href="https://projecteuclid.org/euclid.ss/1356098555">URL</a></li>
+</ul>
+<h2>コメント</h2>
+<ol>
+<li>
+<p>スパース線形回帰の研究では，計画行列 $X$ についての制限固有値条件 (restricted eigenvalue condition) やcompatibility conditionといった条件がよく用いられているが，それらを損失関数の条件として隠蔽して書いたものが制限強凸性といえる．制限強凸性は，今ではよく知られた条件と思われる．</p>
+</li>
+<li>
+<p>Decomposabilityとはおおよそ次のような条件である：ノルム $R(\theta)$ が線形部分空間 $M$ についてdecomposableとは，$\theta \in M$ かつ $\gamma \in M^\perp$ のときに，$R(\theta + \gamma) = R(\theta) + R(\gamma)$ となる．例えば $\ell_1$-ノルムなら，座標の添字の分割について分解可能である．</p>
+</li>
+<li>
+<p>Decomposabilityは，「制限強凸性が成り立つ方向に解を誘導する」という働きをもっている (Lemma 1)</p>
+</li>
+<li>
+<p>ハイパーパラメータの理論値は，既知のノイズ分散に依存している．他の論文でもこのような形の保証は多いが，実用上パラメータチューニングをどうするかは別途考える必要がある．また，リスクバウンドの「確率 $1 - \delta$ で成り立つ」の部分の $\delta$ がハイパーパラメータに依存してしまっている．これでは解釈上問題があると考えている研究者もいて，集中不等式の使い方を改善してこの部分の依存性をなくす証明方法もある．</p>
+</li>
+</ol>
+</article>
+<hr />
+<article>
+	<h3><a href="../minimax-rates-of-estimation-for-high-dimensional-linear-regression-over-ell_q-balls.html">Minimax rates of estimation for high-dimensional linear regression over $\ell_q$-balls</a></h3>
+	<h6>Written by <a href="../author/kentaro-minami.html">Kentaro Minami</a> in <a href="../category/statistics.html">Statistics</a> on 金, 24  3 2017. Tags: <a href="../tag/lasso.html">lasso</a>, <a href="../tag/gao-ci-yuan.html">高次元</a>, <a href="../tag/supasutui-ding.html">スパース推定</a>, </h6>
+	<h2>概要</h2>
+<p>高次元線形回帰モデル ($n &lt; p$) において，ノイズが分散既知の正規分布に従うとする．真の回帰係数が $\ell_q$-ボール ($0 \leq q \leq 1$) に含まれるとき，計画行列に対する適当な条件のもとで $\ell_p$-誤差および $\ell_2$-予測誤差のミニマックスレートを導出した．特に，$\ell_2$-予測誤差の最適レートは $\Omega(\frac{\log p}{n})^{1 - q/2}$ である．</p>
+<h2>文献情報</h2>
+<ul>
+<li>Author: G. Raskutti, M. Wainwright and B. Yu</li>
+<li>Journal: IEEE Transactions on Information Theory</li>
+<li>Year: 2011</li>
+<li><a href="http://ieeexplore.ieee.org/document/6034739">URL</a></li>
+</ul>
+<h2>コメント</h2>
+<ol>
+<li>
+<p>高次元統計では，真の回帰係数にスパース性が仮定されることが多い．スパース性の仮定のもとで得られた理論は，仮定が正しい範囲では良いものの，「スパースに近いが非ゼロ」というような誤特定の状況については正確な示唆を与えてくれないと考えられる．ベクトルのスパース性とは，言い換えれば $\ell_0$-ノルム制約のことである．この論文で考察されている $\ell_q$-球というのは，平たい $\ell_0$ 球よりも少しだけ膨らんだような形状をしている．よって，$\ell_q$-球でのミニマックスを考えることで，誤特定した状況でのワーストな挙動についての示唆が得られる．</p>
+</li>
+<li>
+<p>計画行列に関する条件： (1) 列正規化条件 (2) kernel diameter (3) 制限曲率条件． kernel diameterというのは $\ell_q$-ボールと計画行列の零空間の共通部分の $\ell_p$ 直径．線形回帰モデルでは，零空間に入っているベクトルはそもそも見分けがつかないので，この直径の分はもともと諦めておく必要がある．$\ell_2$-の場合は特殊で，条件 (3) から直径をバウンドすることができる (Lemma 1)．(3) の条件とRE条件などとの比較は3.3.1節にある．</p>
+</li>
+<li>
+<p>証明はcovering numberを抑えてFano不等式</p>
+</li>
+</ol>
+</article>
+<hr />
+<article>
+	<h3><a href="../near-ideal-model-selection-by-ell_1-minimization.html">Near-ideal model selection by $\ell_1$ minimization</a></h3>
+	<h6>Written by <a href="../author/kentaro-minami.html">Kentaro Minami</a> in <a href="../category/statistics.html">Statistics</a> on 金, 24  3 2017. Tags: <a href="../tag/as.html">[AS]</a>, <a href="../tag/lasso.html">lasso</a>, <a href="../tag/gao-ci-yuan.html">高次元</a>, <a href="../tag/supasutui-ding.html">スパース推定</a>, <a href="../tag/moderuxuan-ze.html">モデル選択</a>, </h6>
+	<h2>概要</h2>
+<p>Lassoのサポートリカバリー性能の最適性について調べた論文．サポートリカバリーというのは，おおよそ回帰係数の非ゼロ成分の添字（と符号）を当てるという意味である．</p>
+<p>この論文ではまず，次の3つの意味でlassoのサポートリカバリーの性能を評価する：
+1. スパースな回帰係数 $\beta$ がランダムに出るモデル (generic S-sparse model) を考える．このとき，lassoは $X \beta$ の$\ell_2$ ノルムの意味でのよい近似を高確率で与える．(Theorem 1.2)
+1. $\beta$ の非ゼロ要素の絶対値の下限がある制約を満たすとき，lassoは高確率で $\beta$ の非ゼロ成分の添字と符号を当てる．(= exact model recovery, Theorem 1.3)
+1. Lassoは，スパースなモデルの中で，真の $X \beta$ を $\ell_2$ の意味で最もよく近似するものに対して，ある精度で自動的に追従する．(= model selection oracle inequality, Theorem 1.4)</p>
+<p>次に，「lassoにとって難しい具体的な問題」として，三角級数展開の形で定数信号を近似する問題を考える．これによって，上記の3つの定理が本質的には改善不可能であるということを主張している．</p>
+<h2>文献情報</h2>
+<ul>
+<li>Author: E. Candès and Y. Plan</li>
+<li>Journal: The Annals of Statistics</li>
+<li>Year: 2009</li>
+<li><a href="https://projecteuclid.org/euclid.aos/1247663751">URL</a></li>
+</ul>
+<h2>コメント</h2>
+<ol>
+<li>
+<p>ノイズは分散既知のガウシアンとする．計画行列にはcoherence propertyという，列どうしの内積の上界の仮定をおく．</p>
+</li>
+<li>
+<p>ある問題設定においてLassoが最適であるということを主張しているわけではなく，lassoにとって最適な性能保証はどういう形を調べる目的で反例を作っていると思われる．</p>
+</li>
+</ol>
+</article>
+<hr />
+<article>
+	<h3><a href="../adapting-to-unknown-smoothness-via-wavelet-shrinkage.html">Adapting to unknown smoothness via wavelet shrinkage</a></h3>
+	<h6>Written by <a href="../author/kentaro-minami.html">Kentaro Minami</a> in <a href="../category/statistics.html">Statistics</a> on 日, 19  3 2017. Tags: <a href="../tag/jasa.html">[JASA]</a>, <a href="../tag/wavelet.html">wavelet</a>, <a href="../tag/sure.html">SURE</a>, </h6>
+	<h2>概要</h2>
+<p>i.i.d.ガウス雑音が乗った信号を等間隔に観測して，平均二乗誤差の意味で雑音除去を行う問題を考える．真の信号 $f$ はSobolev空間（またはより一般にBesov空間）の球に含まれているが，微分可能性のパラメータ $m$ および球の半径 $C$ はわからないものとする．このような状況で，仮に滑らかさのパラメータを知っていた場合のミニマックス最適に近くなるような推定量を構成したい．</p>
+<p>この論文では，SureShrinkという手法を提案している．SUREとはStein's Unbiased Risk Estimateの略であり，SUREに基づいて縮小 (shrinkage) のパラメータを決めるのでこのような名前である．</p>
+<h2>文献情報</h2>
+<ul>
+<li>Author:</li>
+<li>Journal: Journal of The American Statistical Association</li>
+<li>Year: 1995</li>
+<li><a href="https://www.jstor.org/stable/2291512">URL</a></li>
+</ul>
+<h2>コメント</h2>
+<ol>
+<li>
+<p>L^2-Sobolev球で滑らかさパラメータ（mとC）を知っている場合は，Pinsker推定量という線形推定量でミニマックスが達成される．Pinsker推定量はmとCに依存した構成になっているが，これらを知らなくても，知っていた場合のミニマックスリスクに自動追従したい（＝適応的ミニマックス）．Efromovich and Pinsker (1984) やNussbaum and Golubev (1990) の推定量などは適応的ミニマックスであることが知られている．</p>
+</li>
+<li>
+<p>L^p-Sobolev球 (p &lt; 2)の場合，そもそもmとCを知っている状況でも，線形推定量ではミニマックスが達成できないことが知られている．そこで，より広い意味の滑らかさを含みうる状況（Besov球）で適応的ミニマックスな推定量はどうやって作ればよいか，というのが本論文の理論的な背景である．</p>
+</li>
+</ol>
+</article>
+<hr />
+
+
+						</div>
+						<!-- End Main Content -->
+						<!-- Sidebar -->
+						<aside class="medium-3 hide-for-small-only columns">
+							<div class="panel">
+								<h5>Links</h5>
+								<ul class="side-nav">
+									<li><a href="http://github.com/ktrmnm/biboroku">Githubリポジトリ</a></li>
+									<li><a href="http://sites.google.com/site/ktrmnm1991/home">Kentaro Minami (HP)</a></li>
+								</ul>
+							</div>
+
+							<div class="panel">
+								<h5>Tags</h5>
+								<ul class="tag-cloud">
+									<li><a href="/tag/[soda].html" class="tag-[<pelican.contents.Article object at 0x10405def0>]">[SODA]</a></li>
+									<li><a href="/tag/離散最適化.html" class="tag-[<pelican.contents.Article object at 0x10405def0>]">離散最適化</a></li>
+									<li><a href="/tag/劣モジュラ最小化.html" class="tag-[<pelican.contents.Article object at 0x10405def0>]">劣モジュラ最小化</a></li>
+									<li><a href="/tag/[jmlr].html" class="tag-[<pelican.contents.Article object at 0x104044908>]">[JMLR]</a></li>
+									<li><a href="/tag/lasso.html" class="tag-[<pelican.contents.Article object at 0x104044908>, <pelican.contents.Article object at 0x104059d30>, <pelican.contents.Article object at 0x104044b00>, <pelican.contents.Article object at 0x104044630>]">lasso</a></li>
+									<li><a href="/tag/高次元.html" class="tag-[<pelican.contents.Article object at 0x104044908>, <pelican.contents.Article object at 0x104059d30>, <pelican.contents.Article object at 0x104044b00>, <pelican.contents.Article object at 0x104044630>]">高次元</a></li>
+									<li><a href="/tag/スパース推定.html" class="tag-[<pelican.contents.Article object at 0x104044908>, <pelican.contents.Article object at 0x104059d30>, <pelican.contents.Article object at 0x104044b00>, <pelican.contents.Article object at 0x104044630>]">スパース推定</a></li>
+									<li><a href="/tag/[statistical-science].html" class="tag-[<pelican.contents.Article object at 0x104059d30>]">[Statistical Science]</a></li>
+									<li><a href="/tag/[as].html" class="tag-[<pelican.contents.Article object at 0x104044630>]">[AS]</a></li>
+									<li><a href="/tag/モデル選択.html" class="tag-[<pelican.contents.Article object at 0x104044630>]">モデル選択</a></li>
+									<li><a href="/tag/[jasa].html" class="tag-[<pelican.contents.Article object at 0x104054908>]">[JASA]</a></li>
+									<li><a href="/tag/wavelet.html" class="tag-[<pelican.contents.Article object at 0x104054908>]">wavelet</a></li>
+									<li><a href="/tag/sure.html" class="tag-[<pelican.contents.Article object at 0x104054908>]">SURE</a></li>
+								</ul>
+							</div>
+
+							<div class="panel">
+								<h5>Monthly Archives</h5>
+								<ul class="side-nav">
+											<li><a href="/posts/2017/03/index.html">3月 2017 (5)</a></li>
+								</ul>
+							</div>
+
+							<div class="panel">
+								<h5>Social</h5>
+								<ul class="side-nav">
+									<li><a href="http://github.com/ktrmnm">Github</a></li>
+								</ul>
+							</div>
+						</aside>
+						<!-- End Sidebar -->
+					</div>
+
+					<!-- Footer -->
+					<footer class="row">
+						<div class="medium-9 small-12">
+							<hr/>
+							<p class="text-center">Powered by <a href="http://getpelican.com">Pelican</a></p>
+						</div>
+					</footer>
+					<!-- End Footer -->
+				</section>
+				<a class="exit-off-canvas"></a>
+			</div><!--off-canvas inner-->
+		</div><!--off-canvas wrap-->
+
+		<script src="../theme/js/jquery.js"></script>
+		<script src="../theme/js/foundation.min.js"></script>
+		<script>
+			$(document).foundation();
+		</script>
+	</body>
+</html>

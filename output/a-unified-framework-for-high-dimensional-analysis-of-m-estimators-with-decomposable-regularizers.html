@@ -1,0 +1,214 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>StatsBiboroku</title>
+		<meta name="description" content="">
+		<meta name="author" content="Kentaro Minami">
+
+		<link rel="stylesheet" href="./theme/css/foundation.css" />
+		<link rel="stylesheet" href="./theme/css/pygment/monokai.css" />
+		<link rel="stylesheet" href="./theme/css/custom.css" />
+
+		<!-- GOOGLE WEB FONTS -->
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="./theme/css/alt-fonts.css" />
+
+		<script src="./theme/js/modernizr.js"></script>
+
+		<!-- Feeds -->
+
+
+		<!-- mathjax config similar to math.stackexchange -->
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			jax: ["input/TeX", "output/HTML-CSS"],
+			tex2jax: {
+				inlineMath: [ ['$', '$'] ],
+				displayMath: [ ['$$', '$$']],
+				processEscapes: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+			},
+			messageStyle: "none",
+			"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+		});
+		</script>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	</head>
+	<body>
+		<div class="off-canvas-wrap">
+			<div class="inner-wrap">
+				<!-- mobile top bar to activate nav -->
+				<nav class="tab-bar show-for-small">
+					<section class="left-small">
+						<a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+					</section>
+
+					<section class="middle tab-bar-section">
+						<h1 class="title">StatsBiboroku</h1>
+					</section>
+				</nav>
+
+				<!-- mobile side bar nav -->
+				<aside class="left-off-canvas-menu">
+					<ul class="off-canvas-list">
+						<li><a href=".">Home</a></li>
+						<li><label>Categories</label></li>
+							<li ><a href="./category/optimization.html">Optimization</a></li>
+							<li class="active"><a href="./category/statistics.html">Statistics</a></li>
+
+						<li><label>Links</label></li>
+							<li><a href="http://github.com/ktrmnm/biboroku">Githubリポジトリ</a></li>
+							<li><a href="http://sites.google.com/site/ktrmnm1991/home">Kentaro Minami (HP)</a></li>
+
+						<li><label>Tags</label></li>
+							<li><a href="./tag/as.html">[AS]</a></li>
+							<li><a href="./tag/gao-ci-yuan.html">高次元</a></li>
+							<li><a href="./tag/jasa.html">[JASA]</a></li>
+							<li><a href="./tag/jmlr.html">[JMLR]</a></li>
+							<li><a href="./tag/lasso.html">lasso</a></li>
+							<li><a href="./tag/li-san-zui-shi-hua.html">離散最適化</a></li>
+							<li><a href="./tag/lie-moziyurazui-xiao-hua.html">劣モジュラ最小化</a></li>
+							<li><a href="./tag/moderuxuan-ze.html">モデル選択</a></li>
+							<li><a href="./tag/soda.html">[SODA]</a></li>
+							<li><a href="./tag/statistical-science.html">[Statistical Science]</a></li>
+							<li><a href="./tag/supasutui-ding.html">スパース推定</a></li>
+							<li><a href="./tag/sure.html">SURE</a></li>
+							<li><a href="./tag/wavelet.html">wavelet</a></li>
+
+						<li><label>Monthly Archives</label></li>
+									<li><a href="/posts/2017/03/index.html">3月 2017 (6)</a></li>
+
+						<li><label>Social</label></li>
+							<li><a href="http://github.com/ktrmnm">Github</a></li>
+					</ul>
+				</aside>
+
+				<!-- top bar nav -->
+				<nav class="top-bar hide-for-small-only" data-topbar>
+					<ul class="title-area">
+						<li class="name">
+							<h1><a href="./">StatsBiboroku</a></h1>
+						</li>
+					</ul>
+
+					<section class="top-bar-section">
+						<ul class="left">
+								<li ><a href="./category/optimization.html">Optimization</a></li>
+								<li class="active"><a href="./category/statistics.html">Statistics</a></li>
+						</ul>
+                        <ul class="right">
+····
+                                     <li><a href="./pages/format-guide.html">フォーマットガイド</a></li>
+                        </ul>
+					</section>
+				</nav>
+
+				<!-- Main Page Content and Sidebar -->
+				<section class="main-section">
+					<div class="row">
+						<!-- Main Content -->
+						<div class="medium-9 small-12 columns" role="content">
+<article>
+	<h2>A unified framework for high-dimensional analysis of M-estimators with decomposable regularizers</h2>
+	<h2>概要</h2>
+<p>高次元統計では，観測の次元 $n$ に対してパラメータの次元 $p$ が大きいモデルを扱う．このような状況では，真の分布（真のパラメータ）の構造に関する仮定が何もなければ，適当な意味で一致性や収束性をもった推定を行うことができない．よって，高次元統計では真のパラメータに何らかの「低次元構造」を仮定する．代表的な低次元構造はスパース性，グループスパース性，行列の低ランク性などである．</p>
+<p>現在までの高次元統計で最も発展してきた推定手法といえば，$\ell_1$-正則化（i.e. Lasso [Tibshirani 1996]）をはじめとした，スパース性罰則つきのM-推定である．例えば，スパースベクトルの推定にはLasso [Tibshirani 1996]，グループ構造をもったスパースベクトルの推定にはGroup lasso [Yuan and Lin 2006]，低ランク行列の推定には核ノルム正則化などといった正則化手法が用いられる．高次元統計の理論では，こういったM-推定量に対して，予測誤差やリスクの収束レートやそのための条件が研究されてきた．Lassoを例にとるならば，真のベクトルが $s$-スパース（非ゼロ要素数が $s$）であって，計画行列に適当な条件があるならば，パラメータ推定のレートはおよそ $s \log p / n$ になるといった様子である．</p>
+<p>この論文では，高次元M-推定の設定を抽象化し，収束レートとそのための条件を非常に一般的な形で与えた．とくに，(1) 正則化項が分解可能ノルム (decomposable norm) であって，(2) 損失関数が制限強凸性 (restricted strong convexity) という性質をもつときに，subspace compatibility constantと呼ばれる量で推定誤差や損失のバウンドを与えることができる．これによって，高次元のさまざまな設定での収束レートを導出することができる．Lassoについては，スパースベクトルの復元についての既知の収束レートを復元したり，弱スパース性（ $\ell_q$-セミノルム（$q \in [0, 1]$) の制約）のもとでの収束レートを導出することができる．</p>
+<h2>文献情報</h2>
+<ul>
+<li>Author: S. Negahban, P. Ravikumar, M. Wainwright and B. Yu</li>
+<li>Journal: Statistical Science</li>
+<li>Year: 2012</li>
+<li><a href="https://projecteuclid.org/euclid.ss/1356098555">URL</a></li>
+</ul>
+<h2>コメント</h2>
+<ol>
+<li>
+<p>スパース線形回帰の研究では，計画行列 $X$ についての制限固有値条件 (restricted eigenvalue condition) やcompatibility conditionといった条件がよく用いられているが，それらを損失関数の条件として隠蔽して書いたものが制限強凸性といえる．制限強凸性は，今ではよく知られた条件と思われる．</p>
+</li>
+<li>
+<p>Decomposabilityとはおおよそ次のような条件である：ノルム $R(\theta)$ が線形部分空間 $M$ についてdecomposableとは，$\theta \in M$ かつ $\gamma \in M^\perp$ のときに，$R(\theta + \gamma) = R(\theta) + R(\gamma)$ となる．例えば $\ell_1$-ノルムなら，座標の添字の分割について分解可能である．</p>
+</li>
+<li>
+<p>Decomposabilityは，「制限強凸性が成り立つ方向に解を誘導する」という働きをもっている (Lemma 1)</p>
+</li>
+<li>
+<p>ハイパーパラメータの理論値は，既知のノイズ分散に依存している．他の論文でもこのような形の保証は多いが，実用上パラメータチューニングをどうするかは別途考える必要がある．また，リスクバウンドの「確率 $1 - \delta$ で成り立つ」の部分の $\delta$ がハイパーパラメータに依存してしまっている．これでは解釈上問題があると考えている研究者もいて，集中不等式の使い方を改善してこの部分の依存性をなくす証明方法もある．</p>
+</li>
+</ol>
+	<hr/>
+	<h6>Written by <a href="./author/kentaro-minami.html">Kentaro Minami</a> in <a href="./category/statistics.html">Statistics</a> on 金, 24  3 2017. Tags: <a href="./tag/statistical-science.html">[Statistical Science]</a>, <a href="./tag/lasso.html">lasso</a>, <a href="./tag/gao-ci-yuan.html">高次元</a>, <a href="./tag/supasutui-ding.html">スパース推定</a>, </h6>
+</article>
+
+<hr/>
+						</div>
+						<!-- End Main Content -->
+						<!-- Sidebar -->
+						<aside class="medium-3 hide-for-small-only columns">
+							<div class="panel">
+								<h5>Links</h5>
+								<ul class="side-nav">
+									<li><a href="http://github.com/ktrmnm/biboroku">Githubリポジトリ</a></li>
+									<li><a href="http://sites.google.com/site/ktrmnm1991/home">Kentaro Minami (HP)</a></li>
+								</ul>
+							</div>
+
+							<div class="panel">
+								<h5>Tags</h5>
+								<ul class="tag-cloud">
+									<li><a href="/tag/[soda].html" class="tag-[<pelican.contents.Article object at 0x10405def0>]">[SODA]</a></li>
+									<li><a href="/tag/離散最適化.html" class="tag-[<pelican.contents.Article object at 0x10405def0>]">離散最適化</a></li>
+									<li><a href="/tag/劣モジュラ最小化.html" class="tag-[<pelican.contents.Article object at 0x10405def0>]">劣モジュラ最小化</a></li>
+									<li><a href="/tag/[jmlr].html" class="tag-[<pelican.contents.Article object at 0x104044908>]">[JMLR]</a></li>
+									<li><a href="/tag/lasso.html" class="tag-[<pelican.contents.Article object at 0x104044908>, <pelican.contents.Article object at 0x104059d30>, <pelican.contents.Article object at 0x104044b00>, <pelican.contents.Article object at 0x104044630>]">lasso</a></li>
+									<li><a href="/tag/高次元.html" class="tag-[<pelican.contents.Article object at 0x104044908>, <pelican.contents.Article object at 0x104059d30>, <pelican.contents.Article object at 0x104044b00>, <pelican.contents.Article object at 0x104044630>]">高次元</a></li>
+									<li><a href="/tag/スパース推定.html" class="tag-[<pelican.contents.Article object at 0x104044908>, <pelican.contents.Article object at 0x104059d30>, <pelican.contents.Article object at 0x104044b00>, <pelican.contents.Article object at 0x104044630>]">スパース推定</a></li>
+									<li><a href="/tag/[statistical-science].html" class="tag-[<pelican.contents.Article object at 0x104059d30>]">[Statistical Science]</a></li>
+									<li><a href="/tag/[as].html" class="tag-[<pelican.contents.Article object at 0x104044630>]">[AS]</a></li>
+									<li><a href="/tag/モデル選択.html" class="tag-[<pelican.contents.Article object at 0x104044630>]">モデル選択</a></li>
+									<li><a href="/tag/[jasa].html" class="tag-[<pelican.contents.Article object at 0x104054908>]">[JASA]</a></li>
+									<li><a href="/tag/wavelet.html" class="tag-[<pelican.contents.Article object at 0x104054908>]">wavelet</a></li>
+									<li><a href="/tag/sure.html" class="tag-[<pelican.contents.Article object at 0x104054908>]">SURE</a></li>
+								</ul>
+							</div>
+
+							<div class="panel">
+								<h5>Monthly Archives</h5>
+								<ul class="side-nav">
+											<li><a href="/posts/2017/03/index.html">3月 2017 (6)</a></li>
+								</ul>
+							</div>
+
+							<div class="panel">
+								<h5>Social</h5>
+								<ul class="side-nav">
+									<li><a href="http://github.com/ktrmnm">Github</a></li>
+								</ul>
+							</div>
+						</aside>
+						<!-- End Sidebar -->
+					</div>
+
+					<!-- Footer -->
+					<footer class="row">
+						<div class="medium-9 small-12">
+							<hr/>
+							<p class="text-center">Powered by <a href="http://getpelican.com">Pelican</a></p>
+						</div>
+					</footer>
+					<!-- End Footer -->
+				</section>
+				<a class="exit-off-canvas"></a>
+			</div><!--off-canvas inner-->
+		</div><!--off-canvas wrap-->
+
+		<script src="./theme/js/jquery.js"></script>
+		<script src="./theme/js/foundation.min.js"></script>
+		<script>
+			$(document).foundation();
+		</script>
+	</body>
+</html>

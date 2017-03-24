@@ -1,0 +1,201 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>StatsBiboroku</title>
+		<meta name="description" content="">
+		<meta name="author" content="Kentaro Minami">
+
+		<link rel="stylesheet" href="./theme/css/foundation.css" />
+		<link rel="stylesheet" href="./theme/css/pygment/monokai.css" />
+		<link rel="stylesheet" href="./theme/css/custom.css" />
+
+		<!-- GOOGLE WEB FONTS -->
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="./theme/css/alt-fonts.css" />
+
+		<script src="./theme/js/modernizr.js"></script>
+
+		<!-- Feeds -->
+
+
+		<!-- mathjax config similar to math.stackexchange -->
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			jax: ["input/TeX", "output/HTML-CSS"],
+			tex2jax: {
+				inlineMath: [ ['$', '$'] ],
+				displayMath: [ ['$$', '$$']],
+				processEscapes: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+			},
+			messageStyle: "none",
+			"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+		});
+		</script>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	</head>
+	<body>
+		<div class="off-canvas-wrap">
+			<div class="inner-wrap">
+				<!-- mobile top bar to activate nav -->
+				<nav class="tab-bar show-for-small">
+					<section class="left-small">
+						<a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+					</section>
+
+					<section class="middle tab-bar-section">
+						<h1 class="title">StatsBiboroku</h1>
+					</section>
+				</nav>
+
+				<!-- mobile side bar nav -->
+				<aside class="left-off-canvas-menu">
+					<ul class="off-canvas-list">
+						<li><a href=".">Home</a></li>
+						<li><label>Categories</label></li>
+							<li class="active"><a href="./category/statistics.html">Statistics</a></li>
+
+						<li><label>Links</label></li>
+							<li><a href="http://github.com/ktrmnm/biboroku">Githubリポジトリ</a></li>
+							<li><a href="http://sites.google.com/site/ktrmnm1991/home">Kentaro Minami (HP)</a></li>
+
+						<li><label>Tags</label></li>
+							<li><a href="./tag/as.html">[AS]</a></li>
+							<li><a href="./tag/gao-ci-yuan.html">高次元</a></li>
+							<li><a href="./tag/jasa.html">[JASA]</a></li>
+							<li><a href="./tag/jmlr.html">[JMLR]</a></li>
+							<li><a href="./tag/lasso.html">lasso</a></li>
+							<li><a href="./tag/moderuxuan-ze.html">モデル選択</a></li>
+							<li><a href="./tag/statistical-science.html">[Statistical Science]</a></li>
+							<li><a href="./tag/supasutui-ding.html">スパース推定</a></li>
+							<li><a href="./tag/sure.html">SURE</a></li>
+							<li><a href="./tag/wavelet.html">wavelet</a></li>
+
+						<li><label>Monthly Archives</label></li>
+									<li><a href="/posts/2017/03/index.html">3月 2017 (5)</a></li>
+
+						<li><label>Social</label></li>
+							<li><a href="http://github.com/ktrmnm">Github</a></li>
+					</ul>
+				</aside>
+
+				<!-- top bar nav -->
+				<nav class="top-bar hide-for-small-only" data-topbar>
+					<ul class="title-area">
+						<li class="name">
+							<h1><a href="./">StatsBiboroku</a></h1>
+						</li>
+					</ul>
+
+					<section class="top-bar-section">
+						<ul class="left">
+								<li class="active"><a href="./category/statistics.html">Statistics</a></li>
+						</ul>
+                        <ul class="right">
+····
+                                     <li><a href="./pages/format-guide.html">フォーマットガイド</a></li>
+                        </ul>
+					</section>
+				</nav>
+
+				<!-- Main Page Content and Sidebar -->
+				<section class="main-section">
+					<div class="row">
+						<!-- Main Content -->
+						<div class="medium-9 small-12 columns" role="content">
+<article>
+	<h2>Minimax rates of estimation for highdimensional linear regression over $\ell_q$-balls</h2>
+	<h2>概要</h2>
+<p>高次元線形回帰モデル ($n &lt; p$) において，ノイズが分散既知の正規分布に従うとする．真の回帰係数が $\ell_q$-ボール ($0 \leq q \leq 1$) に含まれるとき，計画行列に対する適当な条件のもとで $\ell_p$-誤差および $\ell_2$-予測誤差のミニマックスレートを導出した．特に，$\ell_2$-予測誤差の最適レートは $\Omega(\frac{\log p}{n})^{1 - q/2}$ である．</p>
+<h2>文献情報</h2>
+<ul>
+<li>Author: G. Raskutti, M. Wainwright and B. Yu</li>
+<li>Journal: IEEE Transactions on Information Theory</li>
+<li>Year: 2011</li>
+<li><a href="http://ieeexplore.ieee.org/document/6034739">URL</a></li>
+</ul>
+<h2>コメント</h2>
+<ol>
+<li>
+<p>高次元統計では，真の回帰係数にスパース性が仮定されることが多い．スパース性の仮定のもとで得られた理論は，仮定が正しい範囲では良いものの，「スパースに近いが非ゼロ」というような誤特定の状況については正確な示唆を与えてくれないと考えられる．ベクトルのスパース性とは，言い換えれば $\ell_0$-ノルム制約のことである．この論文で考察されている $\ell_q$-球というのは，平たい $\ell_0$ 球よりも少しだけ膨らんだような形状をしている．よって，$\ell_q$-球でのミニマックスを考えることで，誤特定した状況でのワーストな挙動についての示唆が得られる．</p>
+</li>
+<li>
+<p>計画行列に関する条件： (1) 列正規化条件 (2) kernel diameter (3) 制限曲率条件． kernel diameterというのは $\ell_q$-ボールと計画行列の零空間の共通部分の $\ell_p$ 直径．線形回帰モデルでは，零空間に入っているベクトルはそもそも見分けがつかないので，この直径の分はもともと諦めておく必要がある．$\ell_2$-の場合は特殊で，条件 (3) から直径をバウンドすることができる (Lemma 1)．(3) の条件とRE条件などとの比較は3.3.1節にある．</p>
+</li>
+<li>
+<p>証明はcovering numberを抑えてFano不等式</p>
+</li>
+</ol>
+	<hr/>
+	<h6>Written by <a href="./author/kentaro-minami.html">Kentaro Minami</a> in <a href="./category/statistics.html">Statistics</a> on 金, 24  3 2017. Tags: <a href="./tag/lasso.html">lasso</a>, <a href="./tag/gao-ci-yuan.html">高次元</a>, <a href="./tag/supasutui-ding.html">スパース推定</a>, </h6>
+</article>
+
+<hr/>
+						</div>
+						<!-- End Main Content -->
+						<!-- Sidebar -->
+						<aside class="medium-3 hide-for-small-only columns">
+							<div class="panel">
+								<h5>Links</h5>
+								<ul class="side-nav">
+									<li><a href="http://github.com/ktrmnm/biboroku">Githubリポジトリ</a></li>
+									<li><a href="http://sites.google.com/site/ktrmnm1991/home">Kentaro Minami (HP)</a></li>
+								</ul>
+							</div>
+
+							<div class="panel">
+								<h5>Tags</h5>
+								<ul class="tag-cloud">
+									<li><a href="/tag/[jmlr].html" class="tag-[<pelican.contents.Article object at 0x104187940>]">[JMLR]</a></li>
+									<li><a href="/tag/lasso.html" class="tag-[<pelican.contents.Article object at 0x104187940>, <pelican.contents.Article object at 0x10419ccf8>, <pelican.contents.Article object at 0x1041a0eb8>, <pelican.contents.Article object at 0x104187668>]">lasso</a></li>
+									<li><a href="/tag/高次元.html" class="tag-[<pelican.contents.Article object at 0x104187940>, <pelican.contents.Article object at 0x10419ccf8>, <pelican.contents.Article object at 0x1041a0eb8>, <pelican.contents.Article object at 0x104187668>]">高次元</a></li>
+									<li><a href="/tag/スパース推定.html" class="tag-[<pelican.contents.Article object at 0x104187940>, <pelican.contents.Article object at 0x10419ccf8>, <pelican.contents.Article object at 0x1041a0eb8>, <pelican.contents.Article object at 0x104187668>]">スパース推定</a></li>
+									<li><a href="/tag/[statistical-science].html" class="tag-[<pelican.contents.Article object at 0x10419ccf8>]">[Statistical Science]</a></li>
+									<li><a href="/tag/[as].html" class="tag-[<pelican.contents.Article object at 0x104187668>]">[AS]</a></li>
+									<li><a href="/tag/モデル選択.html" class="tag-[<pelican.contents.Article object at 0x104187668>]">モデル選択</a></li>
+									<li><a href="/tag/[jasa].html" class="tag-[<pelican.contents.Article object at 0x104197940>]">[JASA]</a></li>
+									<li><a href="/tag/wavelet.html" class="tag-[<pelican.contents.Article object at 0x104197940>]">wavelet</a></li>
+									<li><a href="/tag/sure.html" class="tag-[<pelican.contents.Article object at 0x104197940>]">SURE</a></li>
+								</ul>
+							</div>
+
+							<div class="panel">
+								<h5>Monthly Archives</h5>
+								<ul class="side-nav">
+											<li><a href="/posts/2017/03/index.html">3月 2017 (5)</a></li>
+								</ul>
+							</div>
+
+							<div class="panel">
+								<h5>Social</h5>
+								<ul class="side-nav">
+									<li><a href="http://github.com/ktrmnm">Github</a></li>
+								</ul>
+							</div>
+						</aside>
+						<!-- End Sidebar -->
+					</div>
+
+					<!-- Footer -->
+					<footer class="row">
+						<div class="medium-9 small-12">
+							<hr/>
+							<p class="text-center">Powered by <a href="http://getpelican.com">Pelican</a></p>
+						</div>
+					</footer>
+					<!-- End Footer -->
+				</section>
+				<a class="exit-off-canvas"></a>
+			</div><!--off-canvas inner-->
+		</div><!--off-canvas wrap-->
+
+		<script src="./theme/js/jquery.js"></script>
+		<script src="./theme/js/foundation.min.js"></script>
+		<script>
+			$(document).foundation();
+		</script>
+	</body>
+</html>
