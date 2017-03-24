@@ -58,7 +58,7 @@
 						<li><a href="https://ktrmnm.github.io/biboroku">Home</a></li>
 						<li><label>Categories</label></li>
 							<li ><a href="https://ktrmnm.github.io/biboroku/category/optimization.html">Optimization</a></li>
-							<li ><a href="https://ktrmnm.github.io/biboroku/category/statistics.html">Statistics</a></li>
+							<li class="active"><a href="https://ktrmnm.github.io/biboroku/category/statistics.html">Statistics</a></li>
 
 						<li><label>Links</label></li>
 							<li><a href="http://github.com/ktrmnm/biboroku">Githubリポジトリ</a></li>
@@ -81,7 +81,7 @@
 							<li><a href="https://ktrmnm.github.io/biboroku/tag/wavelet.html">wavelet</a></li>
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2017/03/index.html">3月 2017 (1)</a></li>
+									<li><a href="/posts/2017/03/index.html">3月 2017 (6)</a></li>
 
 						<li><label>Social</label></li>
 							<li><a href="http://github.com/ktrmnm">Github</a></li>
@@ -99,7 +99,7 @@
 					<section class="top-bar-section">
 						<ul class="left">
 								<li ><a href="https://ktrmnm.github.io/biboroku/category/optimization.html">Optimization</a></li>
-								<li ><a href="https://ktrmnm.github.io/biboroku/category/statistics.html">Statistics</a></li>
+								<li class="active"><a href="https://ktrmnm.github.io/biboroku/category/statistics.html">Statistics</a></li>
 						</ul>
                         <ul class="right">
 ····
@@ -113,38 +113,34 @@
 					<div class="row">
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
-							<div class="row">
-								<div class="small-12 columns">
-									<h2>Posts Tagged With 'wavelet'</h2>
-								</div>
-							</div>
-
 <article>
-	<h3><a href="https://ktrmnm.github.io/biboroku/adapting-to-unknown-smoothness-via-wavelet-shrinkage.html">Adapting to unknown smoothness via wavelet shrinkage</a></h3>
-	<h6>Written by <a href="https://ktrmnm.github.io/biboroku/author/kentaro-minami.html">Kentaro Minami</a> in <a href="https://ktrmnm.github.io/biboroku/category/statistics.html">Statistics</a> on 日, 19  3 2017. Tags: <a href="https://ktrmnm.github.io/biboroku/tag/jasa.html">[JASA]</a>, <a href="https://ktrmnm.github.io/biboroku/tag/wavelet.html">wavelet</a>, <a href="https://ktrmnm.github.io/biboroku/tag/sure.html">SURE</a>, <a href="https://ktrmnm.github.io/biboroku/tag/minimax.html">minimax</a>, </h6>
+	<h2>Minimax rates of estimation for high-dimensional linear regression over $\ell_q$-balls</h2>
 	<h2>概要</h2>
-<p>i.i.d.ガウス雑音が乗った信号を等間隔に観測して，平均二乗誤差の意味で雑音除去を行う問題を考える．真の信号 $f$ はSobolev空間（またはより一般にBesov空間）の球に含まれているが，微分可能性のパラメータ $m$ および球の半径 $C$ はわからないものとする．このような状況で，仮に滑らかさのパラメータを知っていた場合のミニマックス最適に近くなるような推定量を構成したい．</p>
-<p>この論文では，SureShrinkという手法を提案している．SUREとはStein's Unbiased Risk Estimateの略であり，SUREに基づいて縮小 (shrinkage) のパラメータを決めるのでこのような名前である．</p>
+<p>高次元線形回帰モデル ($n &lt; p$) において，ノイズが分散既知の正規分布に従うとする．真の回帰係数が $\ell_q$-ボール ($0 \leq q \leq 1$) に含まれるとき，計画行列に対する適当な条件のもとで $\ell_p$-誤差および $\ell_2$-予測誤差のミニマックスレートを導出した．特に，$\ell_2$-予測誤差の最適レートは $\Omega(\frac{\log p}{n})^{1 - q/2}$ である．</p>
 <h2>文献情報</h2>
 <ul>
-<li>Author: D. Donoho and I. Johnstone</li>
-<li>Journal: Journal of The American Statistical Association</li>
-<li>Year: 1995</li>
-<li><a href="https://www.jstor.org/stable/2291512">URL</a></li>
+<li>Author: G. Raskutti, M. Wainwright and B. Yu</li>
+<li>Journal: IEEE Transactions on Information Theory</li>
+<li>Year: 2011</li>
+<li><a href="http://ieeexplore.ieee.org/document/6034739">URL</a></li>
 </ul>
 <h2>コメント</h2>
 <ol>
 <li>
-<p>L^2-Sobolev球で滑らかさパラメータ（mとC）を知っている場合は，Pinsker推定量という線形推定量でミニマックスが達成される．Pinsker推定量はmとCに依存した構成になっているが，これらを知らなくても，知っていた場合のミニマックスリスクに自動追従したい（＝適応的ミニマックス）．Efromovich and Pinsker (1984) やNussbaum and Golubev (1990) の推定量などは適応的ミニマックスであることが知られている．</p>
+<p>高次元統計では，真の回帰係数にスパース性が仮定されることが多い．スパース性の仮定のもとで得られた理論は，仮定が正しい範囲では良いものの，「スパースに近いが非ゼロ」というような誤特定の状況については正確な示唆を与えてくれないと考えられる．ベクトルのスパース性とは，言い換えれば $\ell_0$-ノルム制約のことである．この論文で考察されている $\ell_q$-球というのは，平たい $\ell_0$ 球よりも少しだけ膨らんだような形状をしている．よって，$\ell_q$-球でのミニマックスを考えることで，誤特定した状況でのワーストな挙動についての示唆が得られる．</p>
 </li>
 <li>
-<p>L^p-Sobolev球 (p &lt; 2)の場合，そもそもmとCを知っている状況でも，線形推定量ではミニマックスが達成できないことが知られている．そこで，より広い意味の滑らかさを含みうる状況（Besov球）で適応的ミニマックスな推定量はどうやって作ればよいか，というのが本論文の理論的な背景である．</p>
+<p>計画行列に関する条件： (1) 列正規化条件 (2) kernel diameter (3) 制限曲率条件． kernel diameterというのは $\ell_q$-ボールと計画行列の零空間の共通部分の $\ell_p$ 直径．線形回帰モデルでは，零空間に入っているベクトルはそもそも見分けがつかないので，この直径の分はもともと諦めておく必要がある．$\ell_2$-の場合は特殊で，条件 (3) から直径をバウンドすることができる (Lemma 1)．(3) の条件とRE条件などとの比較は3.3.1節にある．</p>
+</li>
+<li>
+<p>証明はcovering numberを抑えてFano不等式</p>
 </li>
 </ol>
+	<hr/>
+	<h6>Written by <a href="https://ktrmnm.github.io/biboroku/author/kentaro-minami.html">Kentaro Minami</a> in <a href="https://ktrmnm.github.io/biboroku/category/statistics.html">Statistics</a> on 金, 24  3 2017. Tags: <a href="https://ktrmnm.github.io/biboroku/tag/lasso.html">lasso</a>, <a href="https://ktrmnm.github.io/biboroku/tag/gao-ci-yuan.html">高次元</a>, <a href="https://ktrmnm.github.io/biboroku/tag/supasutui-ding.html">スパース推定</a>, </h6>
 </article>
-<hr />
 
-
+<hr/>
 						</div>
 						<!-- End Main Content -->
 						<!-- Sidebar -->
@@ -180,7 +176,7 @@
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2017/03/index.html">3月 2017 (1)</a></li>
+											<li><a href="/posts/2017/03/index.html">3月 2017 (6)</a></li>
 								</ul>
 							</div>
 

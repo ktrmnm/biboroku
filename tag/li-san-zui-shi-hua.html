@@ -115,30 +115,35 @@
 						<div class="medium-9 small-12 columns" role="content">
 							<div class="row">
 								<div class="small-12 columns">
-									<h2>Posts Tagged With 'wavelet'</h2>
+									<h2>Posts Tagged With '離散最適化'</h2>
 								</div>
 							</div>
 
 <article>
-	<h3><a href="https://ktrmnm.github.io/biboroku/adapting-to-unknown-smoothness-via-wavelet-shrinkage.html">Adapting to unknown smoothness via wavelet shrinkage</a></h3>
-	<h6>Written by <a href="https://ktrmnm.github.io/biboroku/author/kentaro-minami.html">Kentaro Minami</a> in <a href="https://ktrmnm.github.io/biboroku/category/statistics.html">Statistics</a> on 日, 19  3 2017. Tags: <a href="https://ktrmnm.github.io/biboroku/tag/jasa.html">[JASA]</a>, <a href="https://ktrmnm.github.io/biboroku/tag/wavelet.html">wavelet</a>, <a href="https://ktrmnm.github.io/biboroku/tag/sure.html">SURE</a>, <a href="https://ktrmnm.github.io/biboroku/tag/minimax.html">minimax</a>, </h6>
+	<h3><a href="https://ktrmnm.github.io/biboroku/a-combinatorial-algorithm-for-minimizing-symmetric-submodular-functions.html">A combinatorial algorithm for minimizing symmetric submodular functions</a></h3>
+	<h6>Written by <a href="https://ktrmnm.github.io/biboroku/author/kentaro-minami.html">Kentaro Minami</a> in <a href="https://ktrmnm.github.io/biboroku/category/optimization.html">Optimization</a> on 土, 25  3 2017. Tags: <a href="https://ktrmnm.github.io/biboroku/tag/soda.html">[SODA]</a>, <a href="https://ktrmnm.github.io/biboroku/tag/li-san-zui-shi-hua.html">離散最適化</a>, <a href="https://ktrmnm.github.io/biboroku/tag/lie-moziyurazui-xiao-hua.html">劣モジュラ最小化</a>, </h6>
 	<h2>概要</h2>
-<p>i.i.d.ガウス雑音が乗った信号を等間隔に観測して，平均二乗誤差の意味で雑音除去を行う問題を考える．真の信号 $f$ はSobolev空間（またはより一般にBesov空間）の球に含まれているが，微分可能性のパラメータ $m$ および球の半径 $C$ はわからないものとする．このような状況で，仮に滑らかさのパラメータを知っていた場合のミニマックス最適に近くなるような推定量を構成したい．</p>
-<p>この論文では，SureShrinkという手法を提案している．SUREとはStein's Unbiased Risk Estimateの略であり，SUREに基づいて縮小 (shrinkage) のパラメータを決めるのでこのような名前である．</p>
+<p>対称劣モジュラ関数最小化の $O(|V|^3)$ アルゴリズムを与えた論文．ただし，対称劣モジュラ関数というのは，劣モジュラ関数 $f: 2^V \to \mathbb{R}$ であって，$f(X) = f(V - X)$ が成り立つものである．</p>
 <h2>文献情報</h2>
 <ul>
-<li>Author: D. Donoho and I. Johnstone</li>
-<li>Journal: Journal of The American Statistical Association</li>
+<li>Author: M. Queyranne</li>
+<li>Conference: SODA</li>
 <li>Year: 1995</li>
-<li><a href="https://www.jstor.org/stable/2291512">URL</a></li>
+<li><a href="http://dl.acm.org/citation.cfm?id=313669">URL</a></li>
 </ul>
 <h2>コメント</h2>
 <ol>
 <li>
-<p>L^2-Sobolev球で滑らかさパラメータ（mとC）を知っている場合は，Pinsker推定量という線形推定量でミニマックスが達成される．Pinsker推定量はmとCに依存した構成になっているが，これらを知らなくても，知っていた場合のミニマックスリスクに自動追従したい（＝適応的ミニマックス）．Efromovich and Pinsker (1984) やNussbaum and Golubev (1990) の推定量などは適応的ミニマックスであることが知られている．</p>
+<p>対称劣モジュラ関数のわかりやすい例は，無向グラフのカット関数である．また，fが劣モジュラ関数のとき，$g(X) = f(X) + f(V - X)$ によって対称劣モジュラ関数 $g$ を作れる．</p>
 </li>
 <li>
-<p>L^p-Sobolev球 (p &lt; 2)の場合，そもそもmとCを知っている状況でも，線形推定量ではミニマックスが達成できないことが知られている．そこで，より広い意味の滑らかさを含みうる状況（Besov球）で適応的ミニマックスな推定量はどうやって作ればよいか，というのが本論文の理論的な背景である．</p>
+<p>「対称劣モジュラ関数最小化」とは，正確には，$|V| \geq 2$ として，空集合と全体集合を除いた $V$ の真部分集合の中で $f$ を最小化するものを求める問題である．例えば，非負重みをもつ無向グラフのカット関数の最小値は明らかに $f(\emptyset) = f(V) = 0$ であるが，そうではなくて非自明な部分の最小値を求める．</p>
+</li>
+<li>
+<p>アルゴリズムの概要は次の通りである： まず，任意の対称劣モジュラ関数に対して，pendent pairと呼ばれる頂点のペア $(s,t)$ が存在することが知られている．ここでpendent pairというのは，$s$ を固定したとき，s-tカットの最小値が1点集合 ${ t }$ によって達成されるもののことである．このようなペアは $O(n^2)$ 回の関数呼び出しで発見することができる．Queyranneのアルゴリズムは，pendent pair発見アルゴリズムを再帰的に $n-1$ 回呼び出すことで得られる．定義から，pendent pair $(s, t)$ があるとき，最小化問題の解 $X$ は $f(X) = f(t)$ であるか，$s, t \in X$ であるかのどちらかである．前者であれば終了だが，それは判定できないので，ひとまず $t$ と $f(t)$ の値を記憶しておく．後者であると仮定すると，$(s, t)$ をまとめて1頂点だと思うことで，サイズが $n-1$ の問題に帰着される．よって，「pendent pairを見つけて結合する」という操作を残り2頂点になるまで繰り返せば，記憶した $t$ のうちどれかがminimizerになっている．</p>
+</li>
+<li>
+<p>もともと，Nagamochi and Ibaraki (1992)の最小s-tカットアルゴリズムというものがあり，その拡張として提案されたらしい．<a href="https://www.elsevier.com/books/submodular-functions-and-optimization/fujishige/978-0-444-52086-9">Fujishige (2005)</a> のsection 13にも歴史が載っている．</p>
 </li>
 </ol>
 </article>

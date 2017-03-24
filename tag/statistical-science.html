@@ -115,30 +115,37 @@
 						<div class="medium-9 small-12 columns" role="content">
 							<div class="row">
 								<div class="small-12 columns">
-									<h2>Posts Tagged With 'wavelet'</h2>
+									<h2>Posts Tagged With '[Statistical Science]'</h2>
 								</div>
 							</div>
 
 <article>
-	<h3><a href="https://ktrmnm.github.io/biboroku/adapting-to-unknown-smoothness-via-wavelet-shrinkage.html">Adapting to unknown smoothness via wavelet shrinkage</a></h3>
-	<h6>Written by <a href="https://ktrmnm.github.io/biboroku/author/kentaro-minami.html">Kentaro Minami</a> in <a href="https://ktrmnm.github.io/biboroku/category/statistics.html">Statistics</a> on 日, 19  3 2017. Tags: <a href="https://ktrmnm.github.io/biboroku/tag/jasa.html">[JASA]</a>, <a href="https://ktrmnm.github.io/biboroku/tag/wavelet.html">wavelet</a>, <a href="https://ktrmnm.github.io/biboroku/tag/sure.html">SURE</a>, <a href="https://ktrmnm.github.io/biboroku/tag/minimax.html">minimax</a>, </h6>
+	<h3><a href="https://ktrmnm.github.io/biboroku/a-unified-framework-for-high-dimensional-analysis-of-m-estimators-with-decomposable-regularizers.html">A unified framework for high-dimensional analysis of M-estimators with decomposable regularizers</a></h3>
+	<h6>Written by <a href="https://ktrmnm.github.io/biboroku/author/kentaro-minami.html">Kentaro Minami</a> in <a href="https://ktrmnm.github.io/biboroku/category/statistics.html">Statistics</a> on 金, 24  3 2017. Tags: <a href="https://ktrmnm.github.io/biboroku/tag/statistical-science.html">[Statistical Science]</a>, <a href="https://ktrmnm.github.io/biboroku/tag/lasso.html">lasso</a>, <a href="https://ktrmnm.github.io/biboroku/tag/gao-ci-yuan.html">高次元</a>, <a href="https://ktrmnm.github.io/biboroku/tag/supasutui-ding.html">スパース推定</a>, </h6>
 	<h2>概要</h2>
-<p>i.i.d.ガウス雑音が乗った信号を等間隔に観測して，平均二乗誤差の意味で雑音除去を行う問題を考える．真の信号 $f$ はSobolev空間（またはより一般にBesov空間）の球に含まれているが，微分可能性のパラメータ $m$ および球の半径 $C$ はわからないものとする．このような状況で，仮に滑らかさのパラメータを知っていた場合のミニマックス最適に近くなるような推定量を構成したい．</p>
-<p>この論文では，SureShrinkという手法を提案している．SUREとはStein's Unbiased Risk Estimateの略であり，SUREに基づいて縮小 (shrinkage) のパラメータを決めるのでこのような名前である．</p>
+<p>高次元統計では，観測の次元 $n$ に対してパラメータの次元 $p$ が大きいモデルを扱う．このような状況では，真の分布（真のパラメータ）の構造に関する仮定が何もなければ，適当な意味で一致性や収束性をもった推定を行うことができない．よって，高次元統計では真のパラメータに何らかの「低次元構造」を仮定する．代表的な低次元構造はスパース性，グループスパース性，行列の低ランク性などである．</p>
+<p>現在までの高次元統計で最も発展してきた推定手法といえば，$\ell_1$-正則化（i.e. Lasso [Tibshirani 1996]）をはじめとした，スパース性罰則つきのM-推定である．例えば，スパースベクトルの推定にはLasso [Tibshirani 1996]，グループ構造をもったスパースベクトルの推定にはGroup lasso [Yuan and Lin 2006]，低ランク行列の推定には核ノルム正則化などといった正則化手法が用いられる．高次元統計の理論では，こういったM-推定量に対して，予測誤差やリスクの収束レートやそのための条件が研究されてきた．Lassoを例にとるならば，真のベクトルが $s$-スパース（非ゼロ要素数が $s$）であって，計画行列に適当な条件があるならば，パラメータ推定のレートはおよそ $s \log p / n$ になるといった様子である．</p>
+<p>この論文では，高次元M-推定の設定を抽象化し，収束レートとそのための条件を非常に一般的な形で与えた．とくに，(1) 正則化項が分解可能ノルム (decomposable norm) であって，(2) 損失関数が制限強凸性 (restricted strong convexity) という性質をもつときに，subspace compatibility constantと呼ばれる量で推定誤差や損失のバウンドを与えることができる．これによって，高次元のさまざまな設定での収束レートを導出することができる．Lassoについては，スパースベクトルの復元についての既知の収束レートを復元したり，弱スパース性（ $\ell_q$-セミノルム（$q \in [0, 1]$) の制約）のもとでの収束レートを導出することができる．</p>
 <h2>文献情報</h2>
 <ul>
-<li>Author: D. Donoho and I. Johnstone</li>
-<li>Journal: Journal of The American Statistical Association</li>
-<li>Year: 1995</li>
-<li><a href="https://www.jstor.org/stable/2291512">URL</a></li>
+<li>Author: S. Negahban, P. Ravikumar, M. Wainwright and B. Yu</li>
+<li>Journal: Statistical Science</li>
+<li>Year: 2012</li>
+<li><a href="https://projecteuclid.org/euclid.ss/1356098555">URL</a></li>
 </ul>
 <h2>コメント</h2>
 <ol>
 <li>
-<p>L^2-Sobolev球で滑らかさパラメータ（mとC）を知っている場合は，Pinsker推定量という線形推定量でミニマックスが達成される．Pinsker推定量はmとCに依存した構成になっているが，これらを知らなくても，知っていた場合のミニマックスリスクに自動追従したい（＝適応的ミニマックス）．Efromovich and Pinsker (1984) やNussbaum and Golubev (1990) の推定量などは適応的ミニマックスであることが知られている．</p>
+<p>スパース線形回帰の研究では，計画行列 $X$ についての制限固有値条件 (restricted eigenvalue condition) やcompatibility conditionといった条件がよく用いられているが，それらを損失関数の条件として隠蔽して書いたものが制限強凸性といえる．制限強凸性は，今ではよく知られた条件と思われる．</p>
 </li>
 <li>
-<p>L^p-Sobolev球 (p &lt; 2)の場合，そもそもmとCを知っている状況でも，線形推定量ではミニマックスが達成できないことが知られている．そこで，より広い意味の滑らかさを含みうる状況（Besov球）で適応的ミニマックスな推定量はどうやって作ればよいか，というのが本論文の理論的な背景である．</p>
+<p>Decomposabilityとはおおよそ次のような条件である：ノルム $R(\theta)$ が線形部分空間 $M$ についてdecomposableとは，$\theta \in M$ かつ $\gamma \in M^\perp$ のときに，$R(\theta + \gamma) = R(\theta) + R(\gamma)$ となる．例えば $\ell_1$-ノルムなら，座標の添字の分割について分解可能である．</p>
+</li>
+<li>
+<p>Decomposabilityは，「制限強凸性が成り立つ方向に解を誘導する」という働きをもっている (Lemma 1)</p>
+</li>
+<li>
+<p>ハイパーパラメータの理論値は，既知のノイズ分散に依存している．他の論文でもこのような形の保証は多いが，実用上パラメータチューニングをどうするかは別途考える必要がある．また，リスクバウンドの「確率 $1 - \delta$ で成り立つ」の部分の $\delta$ がハイパーパラメータに依存してしまっている．これでは解釈上問題があると考えている研究者もいて，集中不等式の使い方を改善してこの部分の依存性をなくす証明方法もある．</p>
 </li>
 </ol>
 </article>
