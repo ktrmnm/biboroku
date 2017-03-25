@@ -57,7 +57,7 @@
 					<ul class="off-canvas-list">
 						<li><a href="https://ktrmnm.github.io/biboroku">Home</a></li>
 						<li><label>Categories</label></li>
-							<li class="active"><a href="https://ktrmnm.github.io/biboroku/category/optimization.html">Optimization</a></li>
+							<li ><a href="https://ktrmnm.github.io/biboroku/category/optimization.html">Optimization</a></li>
 							<li ><a href="https://ktrmnm.github.io/biboroku/category/statistics.html">Statistics</a></li>
 
 						<li><label>Links</label></li>
@@ -82,7 +82,7 @@
 							<li><a href="https://ktrmnm.github.io/biboroku/tag/wavelet.html">wavelet</a></li>
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2017/03/index.html">3月 2017 (2)</a></li>
+									<li><a href="/posts/2017/03/index.html">3月 2017 (1)</a></li>
 
 						<li><label>Social</label></li>
 							<li><a href="http://github.com/ktrmnm">Github</a></li>
@@ -99,7 +99,7 @@
 
 					<section class="top-bar-section">
 						<ul class="left">
-								<li class="active"><a href="https://ktrmnm.github.io/biboroku/category/optimization.html">Optimization</a></li>
+								<li ><a href="https://ktrmnm.github.io/biboroku/category/optimization.html">Optimization</a></li>
 								<li ><a href="https://ktrmnm.github.io/biboroku/category/statistics.html">Statistics</a></li>
 						</ul>
                         <ul class="right">
@@ -116,39 +116,10 @@
 						<div class="medium-9 small-12 columns" role="content">
 							<div class="row">
 								<div class="small-12 columns">
-									<h2>Category: Optimization</h2>
+									<h2>Posts Tagged With '[NIPS]'</h2>
 								</div>
 							</div>
 
-<article>
-	<h3><a href="https://ktrmnm.github.io/biboroku/a-combinatorial-algorithm-for-minimizing-symmetric-submodular-functions.html">A combinatorial algorithm for minimizing symmetric submodular functions</a></h3>
-	<h6>Written by <a href="https://ktrmnm.github.io/biboroku/author/kentaro-minami.html">Kentaro Minami</a> in <a href="https://ktrmnm.github.io/biboroku/category/optimization.html">Optimization</a> on 土, 25  3 2017. Tags: <a href="https://ktrmnm.github.io/biboroku/tag/soda.html">[SODA]</a>, <a href="https://ktrmnm.github.io/biboroku/tag/li-san-zui-shi-hua.html">離散最適化</a>, <a href="https://ktrmnm.github.io/biboroku/tag/lie-moziyurazui-xiao-hua.html">劣モジュラ最小化</a>, </h6>
-	<h2>概要</h2>
-<p>対称劣モジュラ関数最小化の $O(|V|^3)$ アルゴリズムを与えた論文．ただし，対称劣モジュラ関数というのは，劣モジュラ関数 $f: 2^V \to \mathbb{R}$ であって，$f(X) = f(V - X)$ が成り立つものである．</p>
-<h2>文献情報</h2>
-<ul>
-<li>Author: M. Queyranne</li>
-<li>Conference: SODA</li>
-<li>Year: 1995</li>
-<li><a href="http://dl.acm.org/citation.cfm?id=313669">URL</a></li>
-</ul>
-<h2>コメント</h2>
-<ol>
-<li>
-<p>対称劣モジュラ関数のわかりやすい例は，無向グラフのカット関数である．また，fが劣モジュラ関数のとき，$g(X) = f(X) + f(V - X)$ によって対称劣モジュラ関数 $g$ を作れる．</p>
-</li>
-<li>
-<p>「対称劣モジュラ関数最小化」とは，正確には，$|V| \geq 2$ として，空集合と全体集合を除いた $V$ の真部分集合の中で $f$ を最小化するものを求める問題である．例えば，非負重みをもつ無向グラフのカット関数の最小値は明らかに $f(\emptyset) = f(V) = 0$ であるが，そうではなくて非自明な部分の最小値を求める．</p>
-</li>
-<li>
-<p>アルゴリズムの概要は次の通りである： まず，任意の対称劣モジュラ関数に対して，pendent pairと呼ばれる頂点のペア $(s,t)$ が存在することが知られている．ここでpendent pairというのは，$s$ を固定したとき，s-tカットの最小値が1点集合 ${ t }$ によって達成されるもののことである．このようなペアは $O(n^2)$ 回の関数呼び出しで発見することができる．Queyranneのアルゴリズムは，pendent pair発見アルゴリズムを再帰的に $n-1$ 回呼び出すことで得られる．定義から，pendent pair $(s, t)$ があるとき，最小化問題の解 $X$ は $f(X) = f(t)$ であるか，$s, t \in X$ であるかのどちらかである．前者であれば終了だが，それは判定できないので，ひとまず $t$ と $f(t)$ の値を記憶しておく．後者であると仮定すると，$(s, t)$ をまとめて1頂点だと思うことで，サイズが $n-1$ の問題に帰着される．よって，「pendent pairを見つけて結合する」という操作を残り2頂点になるまで繰り返せば，記憶した $t$ のうちどれかがminimizerになっている．</p>
-</li>
-<li>
-<p>もともと，Nagamochi and Ibaraki (1992)の最小s-tカットアルゴリズムというものがあり，その拡張として提案されたらしい．<a href="https://www.elsevier.com/books/submodular-functions-and-optimization/fujishige/978-0-444-52086-9">Fujishige (2005)</a> のsection 13にも歴史が載っている．</p>
-</li>
-</ol>
-</article>
-<hr />
 <article>
 	<h3><a href="https://ktrmnm.github.io/biboroku/provable-submodular-minimization-using-wolfes-algorithm.html">Provable submodular minimization using Wolfe's algorithm</a></h3>
 	<h6>Written by <a href="https://ktrmnm.github.io/biboroku/author/kentaro-minami.html">Kentaro Minami</a> in <a href="https://ktrmnm.github.io/biboroku/category/optimization.html">Optimization</a> on 土, 25  3 2017. Tags: <a href="https://ktrmnm.github.io/biboroku/tag/nips.html">[NIPS]</a>, <a href="https://ktrmnm.github.io/biboroku/tag/li-san-zui-shi-hua.html">離散最適化</a>, <a href="https://ktrmnm.github.io/biboroku/tag/lie-moziyurazui-xiao-hua.html">劣モジュラ最小化</a>, </h6>
@@ -221,7 +192,7 @@
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2017/03/index.html">3月 2017 (2)</a></li>
+											<li><a href="/posts/2017/03/index.html">3月 2017 (1)</a></li>
 								</ul>
 							</div>
 
