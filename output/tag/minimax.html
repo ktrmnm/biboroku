@@ -82,7 +82,7 @@
 							<li><a href="https://ktrmnm.github.io/biboroku/tag/wavelet.html">wavelet</a></li>
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2017/03/index.html">3月 2017 (7)</a></li>
+									<li><a href="/posts/2017/03/index.html">3月 2017 (1)</a></li>
 
 						<li><label>Social</label></li>
 							<li><a href="http://github.com/ktrmnm">Github</a></li>
@@ -114,24 +114,38 @@
 					<div class="row">
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
-<h1>Archives for 3月 2017</h1>
+							<div class="row">
+								<div class="small-12 columns">
+									<h2>Posts Tagged With 'minimax'</h2>
+								</div>
+							</div>
 
-<dl>
-    <dt>土, 25  3 2017</dt>
-    <dd><a href="https://ktrmnm.github.io/biboroku/a-combinatorial-algorithm-for-minimizing-symmetric-submodular-functions.html">A combinatorial algorithm for minimizing symmetric submodular functions</a></dd>
-    <dt>土, 25  3 2017</dt>
-    <dd><a href="https://ktrmnm.github.io/biboroku/provable-submodular-minimization-using-wolfes-algorithm.html">Provable submodular minimization using Wolfe's algorithm</a></dd>
-    <dt>金, 24  3 2017</dt>
-    <dd><a href="https://ktrmnm.github.io/biboroku/a-practical-scheme-and-fast-algorithm-to-tune-the-lasso-with-optimality-guarantees.html">A Practical Scheme and Fast Algorithm to Tune the Lasso With Optimality Guarantees</a></dd>
-    <dt>金, 24  3 2017</dt>
-    <dd><a href="https://ktrmnm.github.io/biboroku/a-unified-framework-for-high-dimensional-analysis-of-m-estimators-with-decomposable-regularizers.html">A unified framework for high-dimensional analysis of M-estimators with decomposable regularizers</a></dd>
-    <dt>金, 24  3 2017</dt>
-    <dd><a href="https://ktrmnm.github.io/biboroku/minimax-rates-of-estimation-for-high-dimensional-linear-regression-over-ell_q-balls.html">Minimax rates of estimation for high-dimensional linear regression over $\ell_q$-balls</a></dd>
-    <dt>金, 24  3 2017</dt>
-    <dd><a href="https://ktrmnm.github.io/biboroku/near-ideal-model-selection-by-ell_1-minimization.html">Near-ideal model selection by $\ell_1$ minimization</a></dd>
-    <dt>日, 19  3 2017</dt>
-    <dd><a href="https://ktrmnm.github.io/biboroku/adapting-to-unknown-smoothness-via-wavelet-shrinkage.html">Adapting to unknown smoothness via wavelet shrinkage</a></dd>
-</dl>
+<article>
+	<h3><a href="https://ktrmnm.github.io/biboroku/adapting-to-unknown-smoothness-via-wavelet-shrinkage.html">Adapting to unknown smoothness via wavelet shrinkage</a></h3>
+	<h6>Written by <a href="https://ktrmnm.github.io/biboroku/author/kentaro-minami.html">Kentaro Minami</a> in <a href="https://ktrmnm.github.io/biboroku/category/statistics.html">Statistics</a> on 日, 19  3 2017. Tags: <a href="https://ktrmnm.github.io/biboroku/tag/jasa.html">[JASA]</a>, <a href="https://ktrmnm.github.io/biboroku/tag/wavelet.html">wavelet</a>, <a href="https://ktrmnm.github.io/biboroku/tag/sure.html">SURE</a>, <a href="https://ktrmnm.github.io/biboroku/tag/minimax.html">minimax</a>, </h6>
+	<h2>概要</h2>
+<p>i.i.d.ガウス雑音が乗った信号を等間隔に観測して，平均二乗誤差の意味で雑音除去を行う問題を考える．真の信号 $f$ はSobolev空間（またはより一般にBesov空間）の球に含まれているが，微分可能性のパラメータ $m$ および球の半径 $C$ はわからないものとする．このような状況で，仮に滑らかさのパラメータを知っていた場合のミニマックス最適に近くなるような推定量を構成したい．</p>
+<p>この論文では，SureShrinkという手法を提案している．SUREとはStein's Unbiased Risk Estimateの略であり，SUREに基づいて縮小 (shrinkage) のパラメータを決めるのでこのような名前である．</p>
+<h2>文献情報</h2>
+<ul>
+<li>Author: D. Donoho and I. Johnstone</li>
+<li>Journal: Journal of The American Statistical Association</li>
+<li>Year: 1995</li>
+<li><a href="https://www.jstor.org/stable/2291512">URL</a></li>
+</ul>
+<h2>コメント</h2>
+<ol>
+<li>
+<p>L^2-Sobolev球で滑らかさパラメータ（mとC）を知っている場合は，Pinsker推定量という線形推定量でミニマックスが達成される．Pinsker推定量はmとCに依存した構成になっているが，これらを知らなくても，知っていた場合のミニマックスリスクに自動追従したい（＝適応的ミニマックス）．Efromovich and Pinsker (1984) やNussbaum and Golubev (1990) の推定量などは適応的ミニマックスであることが知られている．</p>
+</li>
+<li>
+<p>L^p-Sobolev球 (p &lt; 2)の場合，そもそもmとCを知っている状況でも，線形推定量ではミニマックスが達成できないことが知られている．そこで，より広い意味の滑らかさを含みうる状況（Besov球）で適応的ミニマックスな推定量はどうやって作ればよいか，というのが本論文の理論的な背景である．</p>
+</li>
+</ol>
+</article>
+<hr />
+
+
 						</div>
 						<!-- End Main Content -->
 						<!-- Sidebar -->
@@ -168,7 +182,7 @@
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2017/03/index.html">3月 2017 (7)</a></li>
+											<li><a href="/posts/2017/03/index.html">3月 2017 (1)</a></li>
 								</ul>
 							</div>
 

@@ -7,10 +7,11 @@
 
 ## 基本フォーマット
 
-* (書きかけ)
-* 
+`content/pages/format.md`
 
 ## ドキュメントの生成について
+
+<https://ktrmnm.github.io/biboroku/>
 
 ### 使用ツール
 
@@ -34,3 +35,10 @@ make serve
 ```
 make github
 ```
+
+### 既知の問題
+
+(2017/3/25)
+* TagsやMonthly ArchivesのURLがおかしい
+* 日本語タグ名が中国語読みで生成
+* ブラウザがmixed contentsをブロックするため，MathJaxが表示されないことがある
