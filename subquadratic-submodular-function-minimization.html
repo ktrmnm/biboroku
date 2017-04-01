@@ -57,7 +57,7 @@
 					<ul class="off-canvas-list">
 						<li><a href="https://ktrmnm.github.io/biboroku">Home</a></li>
 						<li><label>Categories</label></li>
-							<li ><a href="https://ktrmnm.github.io/biboroku/category/optimization.html">Optimization</a></li>
+							<li class="active"><a href="https://ktrmnm.github.io/biboroku/category/optimization.html">Optimization</a></li>
 							<li ><a href="https://ktrmnm.github.io/biboroku/category/statistics.html">Statistics</a></li>
 
 						<li><label>Links</label></li>
@@ -83,7 +83,8 @@
 							<li><a href="https://ktrmnm.github.io/biboroku/tag/wavelet.html">wavelet</a></li>
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2017/03/index.html">3月 2017 (1)</a></li>
+									<li><a href="/posts/2017/04/index.html">4月 2017 (1)</a></li>
+									<li><a href="/posts/2017/03/index.html">3月 2017 (7)</a></li>
 
 						<li><label>Social</label></li>
 							<li><a href="http://github.com/ktrmnm">Github</a></li>
@@ -100,7 +101,7 @@
 
 					<section class="top-bar-section">
 						<ul class="left">
-								<li ><a href="https://ktrmnm.github.io/biboroku/category/optimization.html">Optimization</a></li>
+								<li class="active"><a href="https://ktrmnm.github.io/biboroku/category/optimization.html">Optimization</a></li>
 								<li ><a href="https://ktrmnm.github.io/biboroku/category/statistics.html">Statistics</a></li>
 						</ul>
                         <ul class="right">
@@ -115,48 +116,32 @@
 					<div class="row">
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
-							<div class="row">
-								<div class="small-12 columns">
-									<h2>Posts Tagged With '[NIPS]'</h2>
-								</div>
-							</div>
-
 <article>
-	<h3><a href="https://ktrmnm.github.io/biboroku/provable-submodular-minimization-using-wolfes-algorithm.html">Provable submodular minimization using Wolfe's algorithm</a></h3>
-	<h6>Written by <a href="https://ktrmnm.github.io/biboroku/author/kentaro-minami.html">Kentaro Minami</a> in <a href="https://ktrmnm.github.io/biboroku/category/optimization.html">Optimization</a> on 土, 25  3 2017. Tags: <a href="https://ktrmnm.github.io/biboroku/tag/nips.html">[NIPS]</a>, <a href="https://ktrmnm.github.io/biboroku/tag/li-san-zui-shi-hua.html">離散最適化</a>, <a href="https://ktrmnm.github.io/biboroku/tag/lie-moziyurazui-xiao-hua.html">劣モジュラ最小化</a>, </h6>
+	<h2>Subquadratic submodular function minimization</h2>
 	<h2>概要</h2>
-<p>劣モジュラ関数最小化問題で，実用上最速と噂されていたFujishige--Wolfeのアルゴリズム（最小ノルム点アルゴリズム）に擬多項式時間の保証を与えた論文．Fujishige--Wolfeは，基多面体 (base polyhedron) の上で2-ノルムの2乗が最小になる点を探すアルゴリズムである．</p>
+<p>劣モジュラ関数最小化問題について：
+(1) $O(n M^3 \log n EO)$ の偽多項式時間アルゴリズムを提案．ただし，目的関数は整数値で，最大値はMとする．
+(2) $O(n^{5/3} EO/\epsilon) $ の $\epsilon$-近似アルゴリズムを提案．</p>
+<p>アルゴリズムを一言でいえば，最小化したい関数のLovasz拡張を（確率的）劣勾配降下法で最小化する．
+しかし，Lovasz拡張の劣勾配の更新が高速であるため，1ステップが速く回せる．
+(1) の場合は，Lovasz拡張の劣勾配の成分の非ゼロ要素が O(M) であることに着目し，スパースベクトルの加算時に勾配を速く更新できるアルゴリズムを考える．
+(2) の場合は，スパースな確率的劣勾配で分散が十分小さいものを高速に構成する．</p>
 <h2>文献情報</h2>
 <ul>
-<li>Author: D. Chakrabarty, P. Jain and P. Kothari</li>
-<li>Conference: NIPS</li>
-<li>Year: 2014</li>
-<li><a href="https://papers.nips.cc/paper/5321-provable-submodular-minimization-using-wolfes-algorithm">URL</a></li>
+<li>Author: D. Chakrabarty, Y. Lee, A Sidford, and S. Wong</li>
+<li>Conference: STOC</li>
+<li>Year: 2017</li>
+<li><a href="https://arxiv.org/abs/1610.09800">arxiv</a></li>
 </ul>
 <h2>コメント</h2>
-<ol>
-<li>
-<p>Chakrabarty, et al. (2014) はまず，任意の多面体に対して，Wolfeの最小ノルム点アルゴリズムの連続最適化としての収束保証を与えた．次に，最小ノルム点の連続最適化としての近似精度が $\epsilon$ ならば，そこから構成できる解の（離散最適化としての）近似精度は $2n\epsilon$ である．よって，目的関数 $f$ の値のジャンプの最小幅 $F$ よりも $2n\epsilon$ を小さくとれば最適解となる．</p>
-</li>
-<li>
-<p>全体での計算量は $O((n^5 \gamma + n^7)F)$ になる．ただし，$\gamma$ は関数値オラクル呼び出しのコストである．ジャンプの幅 $F$ に依存しているため「擬」多項式時間である．ただし，$f$ が整数値であることが予めわかっていれば，ジャンプ幅は1で下から抑えればよい．</p>
-</li>
-<li>
-<p>この分野の論文としては珍しく（？）計算機実験がある．強多項式時間アルゴリズムとしては2014年当時の理論最速だったIwata and Orlin (2009) のアルゴリズムと比較し，Fujishige--Wolfeの方が実計算時間が速い傾向にあることを示した．</p>
-</li>
-<li>
-<p>2017年現在，理論的に速いアルゴリズムは [Lee+2015] や [Chakrabarty+2017] とのことらしい．後者の筆頭著者はこの論文と同じ人．</p>
-</li>
-</ol>
-<h4>参考文献</h4>
 <ul>
-<li>[Lee+2015] Lee, Sidford and Wong. Faster cutting plane method and its implications for combinatorial and convex optimization. In FOCS, 2015.</li>
-<li>[Chakrabarty+2017] Chakrabarty, Lee, Sidford and Wong. Subquadratic submodular function minimization. In STOC, 2017.</li>
+<li>離散最適化を確率的凸最適化で殴った論文．近似アルゴリズムの方は構成が真に確率的なところが面白い．</li>
 </ul>
+	<hr/>
+	<h6>Written by <a href="https://ktrmnm.github.io/biboroku/author/kentaro-minami.html">Kentaro Minami</a> in <a href="https://ktrmnm.github.io/biboroku/category/optimization.html">Optimization</a> on 日, 02  4 2017. Tags: <a href="https://ktrmnm.github.io/biboroku/tag/stoc.html">[STOC]</a>, <a href="https://ktrmnm.github.io/biboroku/tag/li-san-zui-shi-hua.html">離散最適化</a>, <a href="https://ktrmnm.github.io/biboroku/tag/lie-moziyurazui-xiao-hua.html">劣モジュラ最小化</a>, </h6>
 </article>
-<hr />
 
-
+<hr/>
 						</div>
 						<!-- End Main Content -->
 						<!-- Sidebar -->
@@ -194,7 +179,8 @@
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2017/03/index.html">3月 2017 (1)</a></li>
+											<li><a href="/posts/2017/04/index.html">4月 2017 (1)</a></li>
+											<li><a href="/posts/2017/03/index.html">3月 2017 (7)</a></li>
 								</ul>
 							</div>
 

@@ -77,11 +77,13 @@
 							<li><a href="https://ktrmnm.github.io/biboroku/tag/nips.html">[NIPS]</a></li>
 							<li><a href="https://ktrmnm.github.io/biboroku/tag/soda.html">[SODA]</a></li>
 							<li><a href="https://ktrmnm.github.io/biboroku/tag/statistical-science.html">[Statistical Science]</a></li>
+							<li><a href="https://ktrmnm.github.io/biboroku/tag/stoc.html">[STOC]</a></li>
 							<li><a href="https://ktrmnm.github.io/biboroku/tag/supasutui-ding.html">スパース推定</a></li>
 							<li><a href="https://ktrmnm.github.io/biboroku/tag/sure.html">SURE</a></li>
 							<li><a href="https://ktrmnm.github.io/biboroku/tag/wavelet.html">wavelet</a></li>
 
 						<li><label>Monthly Archives</label></li>
+									<li><a href="/posts/2017/04/index.html">4月 2017 (1)</a></li>
 									<li><a href="/posts/2017/03/index.html">3月 2017 (2)</a></li>
 
 						<li><label>Social</label></li>
@@ -120,6 +122,30 @@
 								</div>
 							</div>
 
+<article>
+	<h3><a href="https://ktrmnm.github.io/biboroku/subquadratic-submodular-function-minimization.html">Subquadratic submodular function minimization</a></h3>
+	<h6>Written by <a href="https://ktrmnm.github.io/biboroku/author/kentaro-minami.html">Kentaro Minami</a> in <a href="https://ktrmnm.github.io/biboroku/category/optimization.html">Optimization</a> on 日, 02  4 2017. Tags: <a href="https://ktrmnm.github.io/biboroku/tag/stoc.html">[STOC]</a>, <a href="https://ktrmnm.github.io/biboroku/tag/li-san-zui-shi-hua.html">離散最適化</a>, <a href="https://ktrmnm.github.io/biboroku/tag/lie-moziyurazui-xiao-hua.html">劣モジュラ最小化</a>, </h6>
+	<h2>概要</h2>
+<p>劣モジュラ関数最小化問題について：
+(1) $O(n M^3 \log n EO)$ の偽多項式時間アルゴリズムを提案．ただし，目的関数は整数値で，最大値はMとする．
+(2) $O(n^{5/3} EO/\epsilon) $ の $\epsilon$-近似アルゴリズムを提案．</p>
+<p>アルゴリズムを一言でいえば，最小化したい関数のLovasz拡張を（確率的）劣勾配降下法で最小化する．
+しかし，Lovasz拡張の劣勾配の更新が高速であるため，1ステップが速く回せる．
+(1) の場合は，Lovasz拡張の劣勾配の成分の非ゼロ要素が O(M) であることに着目し，スパースベクトルの加算時に勾配を速く更新できるアルゴリズムを考える．
+(2) の場合は，スパースな確率的劣勾配で分散が十分小さいものを高速に構成する．</p>
+<h2>文献情報</h2>
+<ul>
+<li>Author: D. Chakrabarty, Y. Lee, A Sidford, and S. Wong</li>
+<li>Conference: STOC</li>
+<li>Year: 2017</li>
+<li><a href="https://arxiv.org/abs/1610.09800">arxiv</a></li>
+</ul>
+<h2>コメント</h2>
+<ul>
+<li>離散最適化を確率的凸最適化で殴った論文．近似アルゴリズムの方は構成が真に確率的なところが面白い．</li>
+</ul>
+</article>
+<hr />
 <article>
 	<h3><a href="https://ktrmnm.github.io/biboroku/a-combinatorial-algorithm-for-minimizing-symmetric-submodular-functions.html">A combinatorial algorithm for minimizing symmetric submodular functions</a></h3>
 	<h6>Written by <a href="https://ktrmnm.github.io/biboroku/author/kentaro-minami.html">Kentaro Minami</a> in <a href="https://ktrmnm.github.io/biboroku/category/optimization.html">Optimization</a> on 土, 25  3 2017. Tags: <a href="https://ktrmnm.github.io/biboroku/tag/soda.html">[SODA]</a>, <a href="https://ktrmnm.github.io/biboroku/tag/li-san-zui-shi-hua.html">離散最適化</a>, <a href="https://ktrmnm.github.io/biboroku/tag/lie-moziyurazui-xiao-hua.html">劣モジュラ最小化</a>, </h6>
@@ -200,27 +226,29 @@
 							<div class="panel">
 								<h5>Tags</h5>
 								<ul class="tag-cloud">
-									<li><a href="/tag/[soda].html" class="tag-[<pelican.contents.Article object at 0x104045ac8>]">[SODA]</a></li>
-									<li><a href="/tag/離散最適化.html" class="tag-[<pelican.contents.Article object at 0x104045ac8>, <pelican.contents.Article object at 0x104045908>]">離散最適化</a></li>
-									<li><a href="/tag/劣モジュラ最小化.html" class="tag-[<pelican.contents.Article object at 0x104045ac8>, <pelican.contents.Article object at 0x104045908>]">劣モジュラ最小化</a></li>
-									<li><a href="/tag/[nips].html" class="tag-[<pelican.contents.Article object at 0x104045908>]">[NIPS]</a></li>
-									<li><a href="/tag/[jmlr].html" class="tag-[<pelican.contents.Article object at 0x104054b38>]">[JMLR]</a></li>
-									<li><a href="/tag/lasso.html" class="tag-[<pelican.contents.Article object at 0x104054b38>, <pelican.contents.Article object at 0x104060f60>, <pelican.contents.Article object at 0x104067710>, <pelican.contents.Article object at 0x104045630>]">lasso</a></li>
-									<li><a href="/tag/高次元.html" class="tag-[<pelican.contents.Article object at 0x104054b38>, <pelican.contents.Article object at 0x104060f60>, <pelican.contents.Article object at 0x104067710>, <pelican.contents.Article object at 0x104045630>]">高次元</a></li>
-									<li><a href="/tag/スパース推定.html" class="tag-[<pelican.contents.Article object at 0x104054b38>, <pelican.contents.Article object at 0x104060f60>, <pelican.contents.Article object at 0x104067710>, <pelican.contents.Article object at 0x104045630>]">スパース推定</a></li>
-									<li><a href="/tag/[statistical-science].html" class="tag-[<pelican.contents.Article object at 0x104060f60>]">[Statistical Science]</a></li>
-									<li><a href="/tag/[as].html" class="tag-[<pelican.contents.Article object at 0x104045630>]">[AS]</a></li>
-									<li><a href="/tag/モデル選択.html" class="tag-[<pelican.contents.Article object at 0x104045630>]">モデル選択</a></li>
-									<li><a href="/tag/[jasa].html" class="tag-[<pelican.contents.Article object at 0x10405a7f0>]">[JASA]</a></li>
-									<li><a href="/tag/wavelet.html" class="tag-[<pelican.contents.Article object at 0x10405a7f0>]">wavelet</a></li>
-									<li><a href="/tag/sure.html" class="tag-[<pelican.contents.Article object at 0x10405a7f0>]">SURE</a></li>
-									<li><a href="/tag/minimax.html" class="tag-[<pelican.contents.Article object at 0x10405a7f0>]">minimax</a></li>
+									<li><a href="/tag/[stoc].html" class="tag-[<pelican.contents.Article object at 0x103f6dd68>]">[STOC]</a></li>
+									<li><a href="/tag/離散最適化.html" class="tag-[<pelican.contents.Article object at 0x103f6dd68>, <pelican.contents.Article object at 0x103f48b00>, <pelican.contents.Article object at 0x103f48940>]">離散最適化</a></li>
+									<li><a href="/tag/劣モジュラ最小化.html" class="tag-[<pelican.contents.Article object at 0x103f6dd68>, <pelican.contents.Article object at 0x103f48b00>, <pelican.contents.Article object at 0x103f48940>]">劣モジュラ最小化</a></li>
+									<li><a href="/tag/[soda].html" class="tag-[<pelican.contents.Article object at 0x103f48b00>]">[SODA]</a></li>
+									<li><a href="/tag/[nips].html" class="tag-[<pelican.contents.Article object at 0x103f48940>]">[NIPS]</a></li>
+									<li><a href="/tag/[jmlr].html" class="tag-[<pelican.contents.Article object at 0x103f57b70>]">[JMLR]</a></li>
+									<li><a href="/tag/lasso.html" class="tag-[<pelican.contents.Article object at 0x103f57b70>, <pelican.contents.Article object at 0x103f63f98>, <pelican.contents.Article object at 0x103f6a748>, <pelican.contents.Article object at 0x103f48668>]">lasso</a></li>
+									<li><a href="/tag/高次元.html" class="tag-[<pelican.contents.Article object at 0x103f57b70>, <pelican.contents.Article object at 0x103f63f98>, <pelican.contents.Article object at 0x103f6a748>, <pelican.contents.Article object at 0x103f48668>]">高次元</a></li>
+									<li><a href="/tag/スパース推定.html" class="tag-[<pelican.contents.Article object at 0x103f57b70>, <pelican.contents.Article object at 0x103f63f98>, <pelican.contents.Article object at 0x103f6a748>, <pelican.contents.Article object at 0x103f48668>]">スパース推定</a></li>
+									<li><a href="/tag/[statistical-science].html" class="tag-[<pelican.contents.Article object at 0x103f63f98>]">[Statistical Science]</a></li>
+									<li><a href="/tag/[as].html" class="tag-[<pelican.contents.Article object at 0x103f48668>]">[AS]</a></li>
+									<li><a href="/tag/モデル選択.html" class="tag-[<pelican.contents.Article object at 0x103f48668>]">モデル選択</a></li>
+									<li><a href="/tag/[jasa].html" class="tag-[<pelican.contents.Article object at 0x103f5d828>]">[JASA]</a></li>
+									<li><a href="/tag/wavelet.html" class="tag-[<pelican.contents.Article object at 0x103f5d828>]">wavelet</a></li>
+									<li><a href="/tag/sure.html" class="tag-[<pelican.contents.Article object at 0x103f5d828>]">SURE</a></li>
+									<li><a href="/tag/minimax.html" class="tag-[<pelican.contents.Article object at 0x103f5d828>]">minimax</a></li>
 								</ul>
 							</div>
 
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
+											<li><a href="/posts/2017/04/index.html">4月 2017 (1)</a></li>
 											<li><a href="/posts/2017/03/index.html">3月 2017 (2)</a></li>
 								</ul>
 							</div>

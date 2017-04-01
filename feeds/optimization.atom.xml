@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>StatsBiboroku - Optimization</title><link href="https://ktrmnm.github.io/biboroku/" rel="alternate"></link><link href="https://ktrmnm.github.io/biboroku/feeds/optimization.atom.xml" rel="self"></link><id>https://ktrmnm.github.io/biboroku/</id><updated>2017-03-25T00:00:00+09:00</updated><entry><title>A combinatorial algorithm for minimizing symmetric submodular functions</title><link href="https://ktrmnm.github.io/biboroku/a-combinatorial-algorithm-for-minimizing-symmetric-submodular-functions.html" rel="alternate"></link><published>2017-03-25T00:00:00+09:00</published><updated>2017-03-25T00:00:00+09:00</updated><author><name>Kentaro Minami</name></author><id>tag:ktrmnm.github.io,2017-03-25:/biboroku/a-combinatorial-algorithm-for-minimizing-symmetric-submodular-functions.html</id><summary type="html">&lt;h2&gt;概要&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>StatsBiboroku - Optimization</title><link href="https://ktrmnm.github.io/biboroku/" rel="alternate"></link><link href="https://ktrmnm.github.io/biboroku/feeds/optimization.atom.xml" rel="self"></link><id>https://ktrmnm.github.io/biboroku/</id><updated>2017-04-02T00:00:00+09:00</updated><entry><title>Subquadratic submodular function minimization</title><link href="https://ktrmnm.github.io/biboroku/subquadratic-submodular-function-minimization.html" rel="alternate"></link><published>2017-04-02T00:00:00+09:00</published><updated>2017-04-02T00:00:00+09:00</updated><author><name>Kentaro Minami</name></author><id>tag:ktrmnm.github.io,2017-04-02:/biboroku/subquadratic-submodular-function-minimization.html</id><summary type="html">&lt;h2&gt;概要&lt;/h2&gt;
+&lt;p&gt;劣モジュラ関数最小化問題について：
+(1) $O(n M^3 \log n EO)$ の偽多項式時間アルゴリズムを提案．ただし，目的関数は整数値で，最大値はMとする．
+(2) $O(n^{5/3} EO/\epsilon) $ の $\epsilon$-近似アルゴリズムを提案．&lt;/p&gt;
+&lt;p&gt;アルゴリズムを一言でいえば，最小化したい関数のLovasz拡張を（確率的）劣勾配降下法で最小化する．
+しかし，Lovasz拡張の劣勾配の更新が高速であるため，1ステップが速く回せる．
+(1) の場合は，Lovasz拡張の劣勾配の成分の非ゼロ要素が O(M) であることに着目し，スパースベクトルの加算時に勾配を速く更新できるアルゴリズムを考える．
+(2) の場合は，スパースな確率的劣勾配で分散が十分小さいものを高速に構成する．&lt;/p&gt;
+&lt;h2&gt;文献情報&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Author: D. Chakrabarty, Y. Lee, A Sidford, and …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h2&gt;概要&lt;/h2&gt;
+&lt;p&gt;劣モジュラ関数最小化問題について：
+(1) $O(n M^3 \log n EO)$ の偽多項式時間アルゴリズムを提案．ただし，目的関数は整数値で，最大値はMとする．
+(2) $O(n^{5/3} EO/\epsilon) $ の $\epsilon$-近似アルゴリズムを提案．&lt;/p&gt;
+&lt;p&gt;アルゴリズムを一言でいえば，最小化したい関数のLovasz拡張を（確率的）劣勾配降下法で最小化する．
+しかし，Lovasz拡張の劣勾配の更新が高速であるため，1ステップが速く回せる．
+(1) の場合は，Lovasz拡張の劣勾配の成分の非ゼロ要素が O(M) であることに着目し，スパースベクトルの加算時に勾配を速く更新できるアルゴリズムを考える．
+(2) の場合は，スパースな確率的劣勾配で分散が十分小さいものを高速に構成する．&lt;/p&gt;
+&lt;h2&gt;文献情報&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Author: D. Chakrabarty, Y. Lee, A Sidford, and S. Wong&lt;/li&gt;
+&lt;li&gt;Conference: STOC&lt;/li&gt;
+&lt;li&gt;Year: 2017&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://arxiv.org/abs/1610.09800"&gt;arxiv&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;コメント&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;離散最適化を確率的凸最適化で殴った論文．近似アルゴリズムの方は構成が真に確率的なところが面白い．&lt;/li&gt;
+&lt;/ul&gt;</content><category term="[STOC]"></category><category term="離散最適化"></category><category term="劣モジュラ最小化"></category></entry><entry><title>A combinatorial algorithm for minimizing symmetric submodular functions</title><link href="https://ktrmnm.github.io/biboroku/a-combinatorial-algorithm-for-minimizing-symmetric-submodular-functions.html" rel="alternate"></link><published>2017-03-25T00:00:00+09:00</published><updated>2017-03-25T00:00:00+09:00</updated><author><name>Kentaro Minami</name></author><id>tag:ktrmnm.github.io,2017-03-25:/biboroku/a-combinatorial-algorithm-for-minimizing-symmetric-submodular-functions.html</id><summary type="html">&lt;h2&gt;概要&lt;/h2&gt;
 &lt;p&gt;対称劣モジュラ関数最小化の $O(|V|^3)$ アルゴリズムを与えた論文．ただし，対称劣モジュラ関数というのは，劣モジュラ関数 $f: 2^V \to \mathbb{R}$ であって，$f(X) = f(V - X)$ が成り立つものである．&lt;/p&gt;
 &lt;h2&gt;文献情報&lt;/h2&gt;
 &lt;ul&gt;
